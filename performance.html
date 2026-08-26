@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -409,7 +409,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,7 +426,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fperformance.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023/issues/new?title=Issue%20on%20page%20%2Fperformance.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -571,18 +571,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">3945</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
-</pre></div>
-</div>
-</div>
 </div>
 <p>A straightforward way to time code is to read the current time with <code class="docutils literal notranslate"><span class="pre">time.time()</span></code>. For example, consider the following matrix multiplication:</p>
 <div class="cell docutils container">
@@ -600,8 +588,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time taken =  0.02455592155456543
-GFLOPS =  81.44674984222536
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time taken =  0.012175798416137695
+GFLOPS =  164.26027531379114
 </pre></div>
 </div>
 </div>
@@ -617,7 +605,7 @@ GFLOPS =  81.44674984222536
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23.1 ms ± 1.7 ms per loop (mean ± std. dev. of 10 runs, 3 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.1 ms ± 536 μs per loop (mean ± std. dev. of 10 runs, 3 loops each)
 </pre></div>
 </div>
 </div>
@@ -764,17 +752,29 @@ GFLOPS =  81.44674984222536
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  1.0
-T =  1.5000000000000004
-T =  2.000000000000001
-T =  2.5000000000000013
-T =  3.0000000000000018
-T =  3.500000000000002
-T =  4.000000000000003
 </pre></div>
 </div>
-<img alt="_images/11385d39d1a59bc0e22db05539bd0b8a70303736c8b56a41ca99ba5847390c4d.png" src="_images/11385d39d1a59bc0e22db05539bd0b8a70303736c8b56a41ca99ba5847390c4d.png" />
-<img alt="_images/3318b80c8111f84df5565f953b4aebf0cfa9d4e7bdcc4c7b2c155ffc5bc786a6.png" src="_images/3318b80c8111f84df5565f953b4aebf0cfa9d4e7bdcc4c7b2c155ffc5bc786a6.png" />
-<img alt="_images/df684936b82f3a35871b04b92332cbac71c87796c49573d4d0867bd076964c04.png" src="_images/df684936b82f3a35871b04b92332cbac71c87796c49573d4d0867bd076964c04.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  1.5000000000000004
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  2.000000000000001
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  2.5000000000000013
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  3.0000000000000018
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  3.500000000000002
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  4.000000000000003
+</pre></div>
+</div>
+<img alt="_images/49156c6cdfcfc3a540e0cc98c53c1ec2acf6ca722378ae4eab20718dce56fb10.png" src="_images/49156c6cdfcfc3a540e0cc98c53c1ec2acf6ca722378ae4eab20718dce56fb10.png" />
+<img alt="_images/2e0ba9c950639264444a9e7bed2829d5762879bb723e78c4f64887dee80b55d0.png" src="_images/2e0ba9c950639264444a9e7bed2829d5762879bb723e78c4f64887dee80b55d0.png" />
+<img alt="_images/7a692587c384ac6526e49d9a16a5b63d2538d5399c8ee3ce4e09a44992c12719.png" src="_images/7a692587c384ac6526e49d9a16a5b63d2538d5399c8ee3ce4e09a44992c12719.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
@@ -907,31 +907,39 @@ T =  4.000000000000003
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using matplotlib backend: &lt;object object at 0x105e1b080&gt;
-Step  0 : current/peak memory usage is 1.558941   1.716343 MB
-Step  10 : current/peak memory usage is 2.179197   24.63378 MB
-Step  20 : current/peak memory usage is 2.205906   24.664777 MB
-Step  30 : current/peak memory usage is 2.241876   24.701142 MB
-Step  40 : current/peak memory usage is 2.269045   24.729506 MB
-Step  50 : current/peak memory usage is 2.313449   24.777767 MB
-Step  60 : current/peak memory usage is 2.312857   24.787235 MB
-Step  70 : current/peak memory usage is 2.323704   24.787244 MB
-Step  80 : current/peak memory usage is 2.334016   24.798104 MB
-Step  90 : current/peak memory usage is 2.347106   24.810732 MB
-Step  100 : current/peak memory usage is 2.355473   24.819035 MB
-Step  110 : current/peak memory usage is 2.347801   24.819035 MB
-Step  120 : current/peak memory usage is 2.357868   24.82418 MB
-Step  130 : current/peak memory usage is 2.368415   24.834717 MB
-Step  140 : current/peak memory usage is 2.379292   24.842918 MB
-Step  150 : current/peak memory usage is 2.372777   24.845585 MB
-T range =  7.374417235632719e-06 7.286560064543426
-delta range =  -0.0022616334982004526 0.0006078416564473385
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">40</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="c1"># timesteps</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="n">nsteps</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span>
+<span class="ne">---&gt; </span><span class="mi">40</span> <span class="n">AL</span><span class="p">,</span> <span class="n">AR</span> <span class="o">=</span> <span class="n">construct_matrices</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span> 
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">'matplotlib'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+
+<span class="nn">Cell In[9], line 16,</span> in <span class="ni">construct_matrices</span><span class="nt">(n, alpha)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="n">alpha</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="n">alpha</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">c</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">---&gt; </span><span class="mi">16</span>     <span class="n">AL</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">row_stack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> 
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="k">return</span> <span class="n">AL</span><span class="p">,</span> <span class="n">AR</span>
+
+<span class="nn">File ~/projects_local/phys512_dev/venv/lib/python3.14/site-packages/numpy/__init__.py:769,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
+<span class="g g-Whitespace">    </span><span class="mi">762</span> <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">__expired_attributes__</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">763</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">764</span>         <span class="sa">f</span><span class="s2">"`np.</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s2">` was removed in the NumPy 2.0 release. "</span>
+<span class="g g-Whitespace">    </span><span class="mi">765</span>         <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">__expired_attributes__</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">766</span>         <span class="n">name</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">767</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">769</span> <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"module </span><span class="si">{</span><span class="vm">__name__</span><span class="si">!r}</span><span class="s2"> has no attribute </span><span class="si">{</span><span class="n">attr</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: module 'numpy' has no attribute 'row_stack'
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1280x960 with 0 Axes&gt;
-</pre></div>
-</div>
-<img alt="_images/6fdc709b57d711d068fa718722280f53b64fad6b2a7d4d8b8498e79120f40159.png" src="_images/6fdc709b57d711d068fa718722280f53b64fad6b2a7d4d8b8498e79120f40159.png" />
 </div>
 </div>
 </section>

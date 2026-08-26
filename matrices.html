@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -409,7 +409,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,7 +426,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fmatrices.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023/issues/new?title=Issue%20on%20page%20%2Fmatrices.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -571,17 +571,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -596,13 +585,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.58996059 0.75209993 0.48554225]
- [0.01451209 0.44534224 0.61595936]
- [0.82547514 0.31765441 0.44246308]
- [0.07961245 0.8890647  0.85950299]]
-[0.01451209 0.44534224 0.61595936]
-0.6159593603590044
-0.6159593603590044
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.06852705 0.74391489 0.23953935]
+ [0.32937675 0.7013033  0.91714369]
+ [0.73290602 0.65525403 0.3979089 ]
+ [0.25337609 0.13575053 0.77900822]]
+[0.32937675 0.7013033  0.91714369]
+0.917143690838843
+0.917143690838843
 </pre></div>
 </div>
 </div>
@@ -615,9 +604,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.58996059, 0.01451209, 0.82547514, 0.07961245],
-       [0.75209993, 0.44534224, 0.31765441, 0.8890647 ],
-       [0.48554225, 0.61595936, 0.44246308, 0.85950299]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.06852705, 0.32937675, 0.73290602, 0.25337609],
+       [0.74391489, 0.7013033 , 0.65525403, 0.13575053],
+       [0.23953935, 0.91714369, 0.3979089 , 0.77900822]])
 </pre></div>
 </div>
 </div>
@@ -631,7 +620,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.5507872 , 2.75307464, 2.7881732 , 4.43625082])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.27497488, 4.48341443, 3.23714079, 2.86190179])
 </pre></div>
 </div>
 </div>
@@ -677,8 +666,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.00000000e+00, -2.14543919e-17],
-       [ 2.01744311e-17,  1.00000000e+00]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.00000000e+00, -7.93806011e-17],
+       [ 5.94997719e-17,  1.00000000e+00]])
 </pre></div>
 </div>
 </div>
@@ -692,8 +681,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2094998874032031
-0.20949988740320313
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12030041848617658
+0.12030041848617662
 </pre></div>
 </div>
 </div>
@@ -706,7 +695,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23.999999999999993
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(23.999999999999993)
 </pre></div>
 </div>
 </div>
@@ -759,11 +748,11 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/5df445430260d9003c40835e8da27bf49652b8ddb9ee54962df6772f5b4ace2e.png" src="_images/5df445430260d9003c40835e8da27bf49652b8ddb9ee54962df6772f5b4ace2e.png" />
+<img alt="_images/b59d4c3e8543de2d14f241d3f8372cf02b82d8436ce45dfde8a2fee9f5aacc32.png" src="_images/b59d4c3e8543de2d14f241d3f8372cf02b82d8436ce45dfde8a2fee9f5aacc32.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/5b380c1a755f44cdfa61b718ba162a958b8a56d84a8dad61b46796456f5c5c56.png" src="_images/5b380c1a755f44cdfa61b718ba162a958b8a56d84a8dad61b46796456f5c5c56.png" />
+<img alt="_images/34c5d73a7bfe0de77707e42cee3b1b9ec24dbf8042e2d86840b71bedb7224370.png" src="_images/34c5d73a7bfe0de77707e42cee3b1b9ec24dbf8042e2d86840b71bedb7224370.png" />
 </div>
 </div>
 </section>
@@ -807,19 +796,19 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues= [11.0675444   0.2182113   1.47388007  2.06970305  2.77897892  8.6318886
-  7.42227103  6.32106408  5.38847361  4.5197732 ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues= [10.96643212 -0.36040949  8.36782307  1.54113515  2.07079146  7.25974549
+  6.16148485  3.71163411  4.54874876  4.99406095]
 Eigenvector check:
-0 9.769962616701378e-15
-1 3.804248582817138e-15
-2 2.8171909249863347e-15
-3 2.831068712794149e-15
-4 4.884981308350689e-15
+0 8.215650382226158e-15
+1 4.1000189354711836e-15
+2 9.71445146547012e-15
+3 6.716849298982197e-15
+4 4.496403249731884e-15
 5 7.105427357601002e-15
-6 3.1086244689504383e-15
-7 6.217248937900877e-15
-8 2.6645352591003757e-15
-9 1.5543122344752192e-15
+6 3.3306690738754696e-15
+7 1.8318679906315083e-15
+8 2.1649348980190553e-15
+9 1.1102230246251565e-15
 </pre></div>
 </div>
 </div>
@@ -838,11 +827,11 @@ Eigenvector check:
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/895d8615a4591d479787bc5023936a4c518a2daa96b340a3a8acb1bcbfa397af.png" src="_images/895d8615a4591d479787bc5023936a4c518a2daa96b340a3a8acb1bcbfa397af.png" />
+<img alt="_images/aa293c97388db258bc1c66050eb98ad6b3bae860b53920483c4e7eb52afc6bae.png" src="_images/aa293c97388db258bc1c66050eb98ad6b3bae860b53920483c4e7eb52afc6bae.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/a83b1e2b68a2e10fa7d16cf9d914583b206e601970249338794cde945d6b51ae.png" src="_images/a83b1e2b68a2e10fa7d16cf9d914583b206e601970249338794cde945d6b51ae.png" />
+<img alt="_images/0e2acec0ec64f9d54fe775f791aba6090ac649507c25427a5d6767088baf29b7.png" src="_images/0e2acec0ec64f9d54fe775f791aba6090ac649507c25427a5d6767088baf29b7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -855,7 +844,7 @@ Eigenvector check:
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/415b751f78b005671e05a34a8ee13267e92ba0dc3bf23f30586c1c0763654872.png" src="_images/415b751f78b005671e05a34a8ee13267e92ba0dc3bf23f30586c1c0763654872.png" />
+<img alt="_images/2bf3807670d45cdc09e489b41ad153a7a4327cd192770a21a8a80e2c17a347e3.png" src="_images/2bf3807670d45cdc09e489b41ad153a7a4327cd192770a21a8a80e2c17a347e3.png" />
 </div>
 </div>
 </section>
@@ -895,25 +884,25 @@ Eigenvector check:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Singular values are:  [2.20405693 0.59132211 0.38046252]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Singular values are:  [1.98057782 0.67548498 0.28583754]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/8d9d5d2810943a2d4492c7688471e976223ba70eda5cb53526cdd576abeb7015.png" src="_images/8d9d5d2810943a2d4492c7688471e976223ba70eda5cb53526cdd576abeb7015.png" />
+<img alt="_images/56b9d2700e83e302cbab5ed13b83434a1f7a883efccef1730a19b9715a952223.png" src="_images/56b9d2700e83e302cbab5ed13b83434a1f7a883efccef1730a19b9715a952223.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/b039c2bdb47ce2a145c68c5684ca974a664f166d5f61ba92d7fe80f912cf7bb6.png" src="_images/b039c2bdb47ce2a145c68c5684ca974a664f166d5f61ba92d7fe80f912cf7bb6.png" />
+<img alt="_images/99045a495f66ff0665c05d8be82970873df674f66cc3e52711655780da7d6edc.png" src="_images/99045a495f66ff0665c05d8be82970873df674f66cc3e52711655780da7d6edc.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/8543edace1f77ecdea62ae14bf1424b744423c6ac0894353c8a16e36fd29f22c.png" src="_images/8543edace1f77ecdea62ae14bf1424b744423c6ac0894353c8a16e36fd29f22c.png" />
+<img alt="_images/eb4a2c68d9f45411dc0ec500303db1db0823a091ebe9a1f53b133bb00a6be734.png" src="_images/eb4a2c68d9f45411dc0ec500303db1db0823a091ebe9a1f53b133bb00a6be734.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/75beb5eef91694ce2c3352baaa1b1d3f955a445593f97bf2bdd05608103c378b.png" src="_images/75beb5eef91694ce2c3352baaa1b1d3f955a445593f97bf2bdd05608103c378b.png" />
+<img alt="_images/38a7c58699ab0d59b0eb4a3ce4835bd9635422beb1432aae33ac7ac6b549e63f.png" src="_images/38a7c58699ab0d59b0eb4a3ce4835bd9635422beb1432aae33ac7ac6b549e63f.png" />
 </div>
 </div>
 </section>

@@ -28,20 +28,70 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plt
-import scipy.integrate
-import time
+r = 1.9 # starting radius  = 1+e
+nsteps = 100
+dt = 2 * np.pi / (nsteps-1)
+t = np.arange(nsteps)*dt
+x_start = np.array((r,0,0,np.sqrt((2/r)-1)))
+t4, x4 = rk4_driver(dt, 2*np.pi, x_start, derivs_orbit, tol=1e-6)
+
+print('number of integration points = %d' % (len(x4,)))
+print('integrated to t/2pi=%lg' % (t4[-1]/(2*np.pi)))
+
+print('start to end differences:', x4[0]-x4[-1])
+
+v = np.sqrt(x4[:,2]**2 + x4[:,3]**2)
+print('vmin=%g, vmax=%lg' % (min(v), max(v)))
+r = np.sqrt(x4[:,0]**2 + x4[:,1]**2)
+print('rmin=%g, rmax=%lg' % (min(r), max(r)))
+
+e = (max(r)-min(r))/2
+print('eccentricity of the orbit = %lg' % (e,))
+
+cols = 255 * t4/max(t4)
+
+x = x4[:,0]
+y = x4[:,1]
+
+plt.scatter(x, y, marker = '.', c=cols.astype(int).tolist())
+plt.title(r'e=%.3lg' % (e,))
+
+plt.xlim((-(1-e)-0.1,1+e+0.1))
+plt.ylim((-1.1,1.1))
+plt.show()
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
-[32m      3[39m [38;5;28;01mimport[39;00m scipy.integrate
-[32m      4[39m [38;5;28;01mimport[39;00m time
+[31mAttributeError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[4][39m[32m, line 6[39m
+[32m      2[39m nsteps = [32m100[39m
+[32m      3[39m dt = [32m2[39m * np.pi / (nsteps-[32m1[39m)
+[32m      4[39m t = np.arange(nsteps)*dt
+[32m      5[39m x_start = np.array((r,[32m0[39m,[32m0[39m,np.sqrt(([32m2[39m/r)-[32m1[39m)))
+[32m----> [39m[32m6[39m t4, x4 = rk4_driver(dt, [32m2[39m*np.pi, x_start, derivs_orbit, tol=[32m1e-6[39m)
+[32m      7[39m 
+[32m      8[39m print([33m'number of integration points = %d'[39m % (len(x4,)))
+[32m      9[39m print([33m'integrated to t/2pi=%lg'[39m % (t4[-[32m1[39m]/([32m2[39m*np.pi)))
 
-[31mModuleNotFoundError[39m: No module named 'numpy'
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 31[39m, in [36mrk4_driver[39m[34m(dt, t_end, x_start, derivs, tol)[39m
+[32m     27[39m                 [38;5;66;03m# take us beyond t=t_end and if so adjust accordingly[39;00m
+[32m     28[39m                 [38;5;28;01mif[39;00m t + dt > t_end:
+[32m     29[39m                     dt = t_end - t
+[32m     30[39m                 [38;5;66;03m# store the more accurate (2-step) result[39;00m
+[32m---> [39m[32m31[39m                 x = np.row_stack((x, x3))
+[32m     32[39m                 [38;5;28;01mbreak[39;00m
+[32m     33[39m             [38;5;28;01melse[39;00m:
+[32m     34[39m                 dt = dt / [32m2[39m
+
+[36mFile [39m[32m~/projects_local/phys512_dev/venv/lib/python3.14/site-packages/numpy/__init__.py:769[39m, in [36m__getattr__[39m[34m(attr)[39m
+[32m    762[39m [38;5;28;01mif[39;00m attr [38;5;129;01min[39;00m __expired_attributes__:
+[32m    763[39m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(
+[32m    764[39m         [33mf[39m[33m"[39m[33m`np.[39m[38;5;132;01m{[39;00mattr[38;5;132;01m}[39;00m[33m` was removed in the NumPy 2.0 release. [39m[33m"[39m
+[32m    765[39m         [33mf[39m[33m"[39m[38;5;132;01m{[39;00m__expired_attributes__[attr][38;5;132;01m}[39;00m[33m"[39m,
+[32m    766[39m         name=[38;5;28;01mNone[39;00m
+[32m    767[39m     )
+[32m--> [39m[32m769[39m [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m([33mf[39m[33m"[39m[33mmodule [39m[38;5;132;01m{[39;00m[34m__name__[39m[38;5;132;01m!r}[39;00m[33m has no attribute [39m[38;5;132;01m{[39;00mattr[38;5;132;01m!r}[39;00m[33m"[39m)
+
+[31mAttributeError[39m: module 'numpy' has no attribute 'row_stack'
 

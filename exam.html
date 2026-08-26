@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -409,7 +409,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,7 +426,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fexam.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023/issues/new?title=Issue%20on%20page%20%2Fexam.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -592,19 +592,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.linalg</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">solve_ivp</span><span class="p">,</span> <span class="n">simpson</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
-</pre></div>
-</div>
-</div>
 </div>
 <p>(a) We need to implement</p>
 <div class="math notranslate nohighlight">
@@ -685,21 +672,21 @@
 1e-09 0.21114975082386198 1.3144971996098735e-16 0.2111497088286285 1.9888838747630465e-07
 3.1622776601683795e-09 0.21114975082386192 1.3144971996098735e-16 0.2111497577046866 3.258741548688466e-08
 1e-08 0.211149750823862 2.628994399219747e-16 0.21114974213531923 4.1148723523119814e-08
-3.162277660168379e-08 0.2111497508238622 1.1830474796488863e-15 0.21114974892760294 8.980635797703979e-09
+3.162277660168379e-08 0.21114975082386217 1.0515977596878988e-15 0.21114974892760294 8.980635797703979e-09
 1e-07 0.21114975082386445 1.1830474796488862e-14 0.21114975046199191 1.7138075348236033e-09
-3.162277660168379e-07 0.21114975082388657 1.165959016053958e-13 0.21114975085856136 1.6433554800138725e-10
+3.162277660168379e-07 0.2111497508238865 1.163330021654738e-13 0.21114975085856136 1.6433554800138725e-10
 1e-06 0.21114975082410797 1.165170317734192e-12 0.21114975096159228 6.522874244741692e-10
 3.162277660168379e-06 0.2111497508263218 1.1649862881262466e-11 0.21114975084100718 8.119938391374103e-11
-1e-05 0.21114975084846072 1.1649915461150451e-10 0.21114975078950768 1.627009707336724e-10
+9.999999999999999e-06 0.21114975084846072 1.1649915461150451e-10 0.21114975078950773 1.6270070783423245e-10
 3.1622776601683795e-05 0.21114975106984937 1.1649903630675655e-09 0.21114975057945007 1.1575286197139799e-09
 0.0001 0.21114975328373617 1.1649903499225933e-08 0.21114974836478062 1.1646148375075809e-08
 0.00031622776601683794 0.21114977542260543 1.1649904103894646e-07 0.21114972622532494 1.1649806318447967e-07
-0.001 0.21114999681139365 1.1649908690175375e-06 0.211149504836472 1.1649901977038177e-06
+0.001 0.21114999681139368 1.1649908691489873e-06 0.211149504836472 1.1649901977038177e-06
 0.0031622776601683794 0.21115221070882342 1.1649954365929718e-05 0.21114729096031795 1.164985293327911e-05
 0.01 0.21117435063791654 0.00011650411122250665 0.21112515315295788 0.00011649396131463415
 </pre></div>
 </div>
-<img alt="_images/869053e9f4a2600e9a753d3e2922f0b55ce493a5a3814be2a00b2cf228c51330.png" src="_images/869053e9f4a2600e9a753d3e2922f0b55ce493a5a3814be2a00b2cf228c51330.png" />
+<img alt="_images/6d2617dda79c457e0668aa19506525fa757d88f42d46c4c72c065151a5e5dba1.png" src="_images/6d2617dda79c457e0668aa19506525fa757d88f42d46c4c72c065151a5e5dba1.png" />
 </div>
 </div>
 <p>Discussion of results:</p>
@@ -768,7 +755,7 @@ Bound state energy =  -0.057976526335251806
 Bound state energy =  -0.021032517563107693
 </pre></div>
 </div>
-<img alt="_images/7e81eed87a60c9b53aed42f7cc5b21dbe8b469df08eb654be6cff7f71d97966f.png" src="_images/7e81eed87a60c9b53aed42f7cc5b21dbe8b469df08eb654be6cff7f71d97966f.png" />
+<img alt="_images/4238b0fb7764d44664a714e54ec6907f5526a9706114e9cba9e5c5f78034fd36.png" src="_images/4238b0fb7764d44664a714e54ec6907f5526a9706114e9cba9e5c5f78034fd36.png" />
 </div>
 </div>
 <p>We see that there are three bound states, the lowest energy is approximately -0.3.</p>
@@ -797,13 +784,23 @@ Bound state energy =  -0.021032517563107693
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000 10 501 E= -0.3012749968924646
 1000 20 1001 E= -0.3013895769195456
-1000 40 2001 E= -0.3013895799235332
-2000 10 1001 E= -0.3007330266811587
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000 40 2001 E= -0.3013895799235332
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000 10 1001 E= -0.3007330266811587
 2000 20 2001 E= -0.3008510003502323
-2000 40 4001 E= -0.300851003477853
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000 40 4001 E= -0.300851003477853
 4000 10 2001 E= -0.3005391726696906
-4000 20 4001 E= -0.300658728177554
-4000 40 8001 E= -0.30065873135955395
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4000 20 4001 E= -0.300658728177554
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4000 40 8001 E= -0.30065873135955395
 </pre></div>
 </div>
 </div>
@@ -843,7 +840,7 @@ Bound state energy =  -0.021032517563107693
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/7b3b3a5c4189e6f46e5b4da45910984c4f9d783dc8f294d9653c2f5fa37c692b.png" src="_images/7b3b3a5c4189e6f46e5b4da45910984c4f9d783dc8f294d9653c2f5fa37c692b.png" />
+<img alt="_images/5e129bcb5e64ace8c3854348af1368835c6129b3571f97fe0a31fed34b8b3311.png" src="_images/5e129bcb5e64ace8c3854348af1368835c6129b3571f97fe0a31fed34b8b3311.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -915,11 +912,39 @@ Bound state energy =  -0.021032517563107693
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n= 1000  dt= 0.01  max alpha= 9980.051923381965
 </pre></div>
 </div>
-<img alt="_images/c9186c2ad10f2a303ae30405b4a08f0e174e8de0f5b0724d1ea77c89d8a50692.png" src="_images/c9186c2ad10f2a303ae30405b4a08f0e174e8de0f5b0724d1ea77c89d8a50692.png" />
-<img alt="_images/61a9caa0687029ad4cd8363bfb1e4e8a7fa22b4397bf12f9df328f10fa37e6a9.png" src="_images/61a9caa0687029ad4cd8363bfb1e4e8a7fa22b4397bf12f9df328f10fa37e6a9.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T base at 1 second =  17.192220533238743
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">59</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span>         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> 
+<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="k">return</span> <span class="n">Tb</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> 
+<span class="ne">---&gt; </span><span class="mi">59</span> <span class="n">Tb</span> <span class="o">=</span> <span class="n">do_int</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">show_plots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"T base at 1 second = "</span><span class="p">,</span> <span class="n">Tb</span><span class="p">)</span>
+
+<span class="nn">Cell In[9], line 38,</span> in <span class="ni">do_int</span><span class="nt">(n, dt, show_plots, interp)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="n">c</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">alpha</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>    <span class="c1"># upper and lower diagonals need the right values of alpha</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="n">alpha</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># a is on the upper diagonal so needs to start with alpha_0, whereas c</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span>                          <span class="c1"># on the lower diagonal should start with alpha_1</span>
+<span class="ne">---&gt; </span><span class="mi">38</span>     <span class="n">AA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">row_stack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> 
+<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="n">Tb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">Tb</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nn">File ~/projects_local/phys512_dev/venv/lib/python3.14/site-packages/numpy/__init__.py:769,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
+<span class="g g-Whitespace">    </span><span class="mi">762</span> <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">__expired_attributes__</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">763</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">764</span>         <span class="sa">f</span><span class="s2">"`np.</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s2">` was removed in the NumPy 2.0 release. "</span>
+<span class="g g-Whitespace">    </span><span class="mi">765</span>         <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">__expired_attributes__</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">766</span>         <span class="n">name</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">767</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">769</span> <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"module </span><span class="si">{</span><span class="vm">__name__</span><span class="si">!r}</span><span class="s2"> has no attribute </span><span class="si">{</span><span class="n">attr</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: module 'numpy' has no attribute 'row_stack'
 </pre></div>
 </div>
+<img alt="_images/0a0b55a8ea140e5e99d2bebca8171fcf454e08ec1cc09f305374b883901a5746.png" src="_images/0a0b55a8ea140e5e99d2bebca8171fcf454e08ec1cc09f305374b883901a5746.png" />
 </div>
 </div>
 <div class="cell docutils container">

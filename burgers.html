@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -409,7 +409,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,7 +426,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fburgers.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023/issues/new?title=Issue%20on%20page%20%2Fburgers.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -585,18 +585,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.linalg</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.linalg</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
 </pre></div>
 </div>
 </div>
@@ -762,26 +750,28 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/lib/python3.11/site-packages/matplotlib/cbook/__init__.py:1335: ComplexWarning: Casting complex values to real discards the imaginary part
-  return np.asarray(x, float)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/matplotlib/cbook.py:1810: ComplexWarning: Casting complex values to real discards the imaginary part
+  return math.isfinite(val)
+/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/matplotlib/cbook.py:1407: ComplexWarning: Casting complex values to real discards the imaginary part
+  return np.asanyarray(x, float)
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/ecf0eaba38f393b76825c8d0493c2ad9ef0bd681d6144d83120f3bc2040af942.png" src="_images/ecf0eaba38f393b76825c8d0493c2ad9ef0bd681d6144d83120f3bc2040af942.png" />
+<img alt="_images/ad47421d5580384095dfb8e9efce18106152a5fe8c4f0c344d8e904738424318.png" src="_images/ad47421d5580384095dfb8e9efce18106152a5fe8c4f0c344d8e904738424318.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/43e1f7738127edc34516d6523617cbe7a4f0ee123749b9ee4f4bbe3d2237962c.png" src="_images/43e1f7738127edc34516d6523617cbe7a4f0ee123749b9ee4f4bbe3d2237962c.png" />
+<img alt="_images/c67ba1ccf30d2973cd849294cba0b5986961400c4ce44807825bf54eefe8c3fd.png" src="_images/c67ba1ccf30d2973cd849294cba0b5986961400c4ce44807825bf54eefe8c3fd.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/f8b5ec991ac7f0c752392df57ba62bd1996388a84c581a13ea5cf480ae7f0214.png" src="_images/f8b5ec991ac7f0c752392df57ba62bd1996388a84c581a13ea5cf480ae7f0214.png" />
+<img alt="_images/db19cb618bc06cd8a71c57c931eb567d08d9f8dde25dfbda41e9f7de61a2cf1a.png" src="_images/db19cb618bc06cd8a71c57c931eb567d08d9f8dde25dfbda41e9f7de61a2cf1a.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/d76c4b870c079f7428527edd319a9786de6148099c5f1cc457ec3e7652c04152.png" src="_images/d76c4b870c079f7428527edd319a9786de6148099c5f1cc457ec3e7652c04152.png" />
+<img alt="_images/ab35a810b04e78a04b48b4ec408b452da53b2a6acc1e671cf7a68ee0e311b1dd.png" src="_images/ab35a810b04e78a04b48b4ec408b452da53b2a6acc1e671cf7a68ee0e311b1dd.png" />
 </div>
 </div>
 <section id="further-reading">

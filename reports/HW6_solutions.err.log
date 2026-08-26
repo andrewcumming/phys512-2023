@@ -28,18 +28,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plt
-import scipy.linalg
+import sympy.matrices
+from sympy.printing import pprint
+# declare the step size h as a symbol
+h = sympy.Symbol('h')
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
-[32m      3[39m [38;5;28;01mimport[39;00m scipy.linalg
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m sympy.matrices
+[32m      2[39m [38;5;28;01mfrom[39;00m sympy.printing [38;5;28;01mimport[39;00m pprint
+[32m      3[39m [38;5;66;03m# declare the step size h as a symbol[39;00m
+[32m      4[39m h = sympy.Symbol([33m'h'[39m)
 
-[31mModuleNotFoundError[39m: No module named 'numpy'
+[31mModuleNotFoundError[39m: No module named 'sympy'
 

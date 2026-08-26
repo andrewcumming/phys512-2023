@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -405,7 +405,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -422,7 +422,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fnonlinear_fit.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023/issues/new?title=Issue%20on%20page%20%2Fnonlinear_fit.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -549,17 +549,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that for simplicity here we will set <span class="math notranslate nohighlight">\(\sigma_i=1\)</span> when calculating the residuals and the <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> matrix. This means our best fit <span class="math notranslate nohighlight">\(\chi^2\)</span> will be <span class="math notranslate nohighlight">\(&lt;1\)</span>. In a real application, you would want to put these factors back in.</p>
 <div class="cell docutils container">
@@ -636,12 +625,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq = 1.72415, a=(1, 1, 1)
-chisq = 0.366203, a=(1.27584, 1.81913, 0.714446)
-chisq = 0.098037, a=(1.40505, 2.3676, 0.375281)
-chisq = 0.0871835, a=(1.31653, 2.19708, 0.272856)
-chisq = 0.0871666, a=(1.31754, 2.19564, 0.276133)
-a-a0 = [ 0.11754419  0.19564403 -0.02386721]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq = 1.72874, a=(1, 1, 1)
+chisq = 0.33458, a=(1.25457, 1.7992, 0.70037)
+chisq = 0.0890185, a=(1.31308, 2.20991, 0.365282)
+chisq = 0.0796336, a=(1.18734, 1.93807, 0.289017)
+chisq = 0.0796247, a=(1.18877, 1.94155, 0.291762)
+a-a0 = [-0.01122692 -0.05845446 -0.00823828]
 </pre></div>
 </div>
 </div>
@@ -659,7 +648,7 @@ a-a0 = [ 0.11754419  0.19564403 -0.02386721]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/74ae84774ef526fe43b3c91c12ccd8e32f08b911e483d756db173306a7cc20c0.png" src="_images/74ae84774ef526fe43b3c91c12ccd8e32f08b911e483d756db173306a7cc20c0.png" />
+<img alt="_images/e807f4328164783a561184ea3a54aefd38c12ee2d1f2806973ac5ed23f656b33.png" src="_images/e807f4328164783a561184ea3a54aefd38c12ee2d1f2806973ac5ed23f656b33.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -687,10 +676,10 @@ a-a0 = [ 0.11754419  0.19564403 -0.02386721]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best-fit parameters are:  [1.31738328 2.19528521 0.27616421]  chisq =  0.08716656879639278
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best-fit parameters are:  [1.18882201 1.94165041 0.29179992]  chisq =  0.0796247093327357
 </pre></div>
 </div>
-<img alt="_images/37f8a2b200874d3a258848cb6f4930d8c228258a11c9c2562ae08521abaad1c0.png" src="_images/37f8a2b200874d3a258848cb6f4930d8c228258a11c9c2562ae08521abaad1c0.png" />
+<img alt="_images/0775dcdd337788191a582039c9252dbdcdd365bc136692efbc3cfcd52e37dda9.png" src="_images/0775dcdd337788191a582039c9252dbdcdd365bc136692efbc3cfcd52e37dda9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -747,32 +736,34 @@ a-a0 = [ 0.11754419  0.19564403 -0.02386721]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq = 4.35686, a=(1.05795, 2.12318, 3.85023), lam = 0.001
-chisq = 2.58937, a=(2.41681, 7.22586, 3.1834), lam = 0.0001
-chisq = 1.21939, a=(6.08194, 23.1039, 0.424241), lam = 1e-05
-chisq = 189.869, a=(-5.35986, -36.1361, 0.00413336), lam = 1e-06
-chisq = 190.127, a=(-5.35976, -36.1356, 0.00413714), lam = 1e-05
-chisq = 192.748, a=(-5.35873, -36.1302, 0.00417495), lam = 0.0001
-chisq = 223.712, a=(-5.34844, -36.077, 0.00455263), lam = 0.001
-chisq = 7920.81, a=(-5.24659, -35.5496, 0.00829243), lam = 0.01
-chisq = 230.572, a=(-4.31971, -30.7507, 0.0423246), lam = 0.1
-chisq = 32.796, a=(0.361032, -6.51611, 0.214187), lam = 1
-chisq = 1.04234, a=(5.04177, 17.7185, 0.38605), lam = 10
-chisq = 57.7565, a=(0.897392, -2.6169, 0.2344), lam = 1
-chisq = 0.886796, a=(4.28825, 14.0211, 0.358477), lam = 10
-chisq = 1159.32, a=(1.19336, -0.397116, 0.247023), lam = 1
-chisq = 0.752211, a=(3.72554, 11.3996, 0.338213), lam = 10
-chisq = 4.63378, a=(1.36124, 0.910213, 0.255241), lam = 1
-chisq = 0.637387, a=(3.29567, 9.49247, 0.323127), lam = 10
-chisq = 0.601884, a=(1.4562, 1.69196, 0.260709), lam = 1
-chisq = 0.109556, a=(1.31024, 1.99391, 0.271868), lam = 0.1
-chisq = 0.087314, a=(1.31515, 2.1745, 0.276796), lam = 0.01
-chisq = 0.0871666, a=(1.31746, 2.1953, 0.276305), lam = 0.001
-a-a0 = [ 0.11745574  0.1953001  -0.02369468]
-Best-fit parameters are:  [1.31745574 2.1953001  0.27630532]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chisq = 4.23543, a=(1.07494, 2.14373, 3.82558), lam = 0.001
+chisq = 2.47195, a=(2.40285, 7.14087, 3.11996), lam = 0.0001
+chisq = 1.22478, a=(5.66093, 21.2952, 0.43278), lam = 1e-05
+chisq = 496.59, a=(-5.16508, -34.0623, 0.25906), lam = 1e-06
+chisq = 498.231, a=(-5.16498, -34.0618, 0.259061), lam = 1e-05
+chisq = 515.23, a=(-5.16401, -34.0568, 0.259077), lam = 0.0001
+chisq = 768.789, a=(-5.15428, -34.0071, 0.259233), lam = 0.001
+chisq = 323.798, a=(-5.0579, -33.5143, 0.260779), lam = 0.01
+chisq = 150.843, a=(-4.18091, -29.0299, 0.274852), lam = 0.1
+chisq = 6.85541, a=(0.247919, -6.3836, 0.34592), lam = 1
+chisq = 1.04482, a=(4.67675, 16.2627, 0.416987), lam = 10
+chisq = 240.737, a=(0.764918, -2.67533, 0.338563), lam = 1
+chisq = 0.887119, a=(3.96551, 12.8194, 0.402728), lam = 10
+chisq = 582.68, a=(1.05352, -0.554768, 0.332524), lam = 1
+chisq = 0.751049, a=(3.43605, 10.3877, 0.389964), lam = 10
+chisq = 6.66642, a=(1.2185, 0.694919, 0.32776), lam = 1
+chisq = 0.635236, a=(3.03286, 8.6254, 0.378654), lam = 10
+chisq = 0.701104, a=(1.31234, 1.44107, 0.323975), lam = 1
+chisq = 0.537766, a=(2.72004, 7.31916, 0.368712), lam = 10
+chisq = 0.201339, a=(1.36362, 1.88619, 0.320885), lam = 1
+chisq = 0.081053, a=(1.20605, 1.93177, 0.29867), lam = 0.1
+chisq = 0.079625, a=(1.18928, 1.94199, 0.292021), lam = 0.01
+chisq = 0.0796247, a=(1.18883, 1.94166, 0.291803), lam = 0.001
+a-a0 = [-0.01117384 -0.05834111 -0.00819674]
+Best-fit parameters are:  [1.18882616 1.94165889 0.29180326]
 </pre></div>
 </div>
-<img alt="_images/66def8a423b9e38db8f5f3659ddcddf35a5b285547dfe9669ad935ae3d055568.png" src="_images/66def8a423b9e38db8f5f3659ddcddf35a5b285547dfe9669ad935ae3d055568.png" />
+<img alt="_images/4767f361d40b878ad83e363aad75d9bc5c2185461f8ff2d22a33f56506a1c85d.png" src="_images/4767f361d40b878ad83e363aad75d9bc5c2185461f8ff2d22a33f56506a1c85d.png" />
 </div>
 </div>
 </section>

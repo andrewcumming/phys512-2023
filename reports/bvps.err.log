@@ -28,22 +28,74 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plt
-import scipy.integrate
-import scipy.optimize
-import scipy.special
-import time
+# Use the frequency from the shooting method:
+omega = om_s
+ngrid = 200
+x = np.linspace(0,1,ngrid)
+
+# Initial guess
+f = np.ones_like(x)
+plt.plot(x, f)
+
+niter = 2
+for m in range(niter):
+
+    t0 = time.time()
+
+    G = calculate_G(f, x, omega)
+    J = calculate_J_banded(f, x, omega)
+        
+    df = -scipy.linalg.solve_banded((1,1), J, G)
+    f = f + df
+    
+    f = f / max(abs(f))
+    if (f[1]-f[0]) < 0.0:
+        f = -f
+
+    print('Solve took %lg seconds' % (time.time()-t0,))
+    plt.plot(x, f, label='Iteration %d' % (m+1,))
+
+plt.legend()
+plt.show()
+
+plt.clf()
+plt.plot(x,f)
+# compare with the analytic solution for constant density:
+#plt.plot(x, np.sin(5 * np.pi * x), ":")
+# compare with the shooting result:
+plt.plot(x_s, f_s * max(abs(f))/max(abs(f_s)), "--")
+plt.plot((0,1),(0,0),"k:")
+plt.show()
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
-[32m      3[39m [38;5;28;01mimport[39;00m scipy.integrate
-[32m      4[39m [38;5;28;01mimport[39;00m scipy.optimize
+[31mAttributeError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[8][39m[32m, line 16[39m
+[32m     12[39m 
+[32m     13[39m     t0 = time.time()
+[32m     14[39m 
+[32m     15[39m     G = calculate_G(f, x, omega)
+[32m---> [39m[32m16[39m     J = calculate_J_banded(f, x, omega)
+[32m     17[39m 
+[32m     18[39m     df = -scipy.linalg.solve_banded(([32m1[39m,[32m1[39m), J, G)
+[32m     19[39m     f = f + df
 
-[31mModuleNotFoundError[39m: No module named 'numpy'
+[36mCell[39m[36m [39m[32mIn[7][39m[32m, line 17[39m, in [36mcalculate_J_banded[39m[34m(f, x, omega)[39m
+[32m     13[39m     c = np.ones_like(x)
+[32m     14[39m     c[-[32m2[39m] = [32m0[39m
+[32m     15[39m     c[-[32m1[39m] = [32m0[39m
+[32m     16[39m 
+[32m---> [39m[32m17[39m     [38;5;28;01mreturn[39;00m np.row_stack((a,b,c))
+
+[36mFile [39m[32m~/projects_local/phys512_dev/venv/lib/python3.14/site-packages/numpy/__init__.py:769[39m, in [36m__getattr__[39m[34m(attr)[39m
+[32m    762[39m [38;5;28;01mif[39;00m attr [38;5;129;01min[39;00m __expired_attributes__:
+[32m    763[39m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(
+[32m    764[39m         [33mf[39m[33m"[39m[33m`np.[39m[38;5;132;01m{[39;00mattr[38;5;132;01m}[39;00m[33m` was removed in the NumPy 2.0 release. [39m[33m"[39m
+[32m    765[39m         [33mf[39m[33m"[39m[38;5;132;01m{[39;00m__expired_attributes__[attr][38;5;132;01m}[39;00m[33m"[39m,
+[32m    766[39m         name=[38;5;28;01mNone[39;00m
+[32m    767[39m     )
+[32m--> [39m[32m769[39m [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m([33mf[39m[33m"[39m[33mmodule [39m[38;5;132;01m{[39;00m[34m__name__[39m[38;5;132;01m!r}[39;00m[33m has no attribute [39m[38;5;132;01m{[39;00mattr[38;5;132;01m!r}[39;00m[33m"[39m)
+
+[31mAttributeError[39m: module 'numpy' has no attribute 'row_stack'
 

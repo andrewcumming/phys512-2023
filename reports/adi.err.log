@@ -28,18 +28,105 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import scipy.linalg
-import matplotlib.pyplot as plt
+# set up the grid and initial condition
+n = 128
+T = np.zeros((n,n))
+x = np.linspace(0,1,n)
+dx = x[1]-x[0]
+xx, yy = np.meshgrid(x, x)
+x0 = (0.5, 0.5)   # location of the gaussian
+t0 = 0.001   # initial time
+T = gaussian(xx, yy, x0, t0)
+
+# timesteps
+alpha = 2
+nsteps = 40
+dt = alpha * dx**2
+AL, AR = construct_matrices(n, alpha)
+
+%matplotlib
+plt.imshow(T)
+plt.title("%d: t=%lg" % (0,t0))
+plt.colorbar()
+plt.show()
+
+Tnew = np.zeros_like(T)
+B = np.zeros_like(T)
+
+# We take twice as many steps here because we are doing half-timesteps
+for i in range(2*nsteps):
+
+    # Compute the right-hand side matrix row by row
+    for j in range(n):
+        B[j,:] = AR @ T[j,:]
+
+    # and now solve column by column for the new T
+    for j in range(n):
+        Tnew[:,j] = scipy.linalg.solve_banded((1,1), AL, B[:,j])
+
+    # take the transpose to swap directions for the next half-step
+    T = Tnew.T
+    
+    if i%2 == 1:
+        ti = t0 + dt*(1 + i//2)
+        plt.clf()
+        plt.imshow(T)
+        plt.title("%d: t=%lg" % (1 + i//2,ti))
+        plt.colorbar()
+        plt.show()
+        plt.pause(1e-3)
+
+# compare the result with the analytic one
+ti = t0 + dt*(1 + i//2)
+delta = (T - gaussian(xx, yy, x0, ti)) / np.max(T)
+print("T range = ", np.min(T), np.max(T))
+print("delta range = ", np.min(delta), np.max(delta))
+
+%matplotlib inline
+plt.clf()
+fig = plt.figure(figsize=(8,4))
+plt.subplot(121)
+plt.imshow(T)
+plt.title(r'$T$')
+plt.colorbar(shrink=0.7)
+plt.subplot(122)
+plt.imshow(delta)
+plt.title(r'$\Delta T/T$')
+plt.colorbar(shrink=0.7)
+plt.tight_layout()
+plt.show()
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      2[39m [38;5;28;01mimport[39;00m scipy.linalg
-[32m      3[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
+[31mAttributeError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[4][39m[32m, line 15[39m
+[32m     11[39m [38;5;66;03m# timesteps[39;00m
+[32m     12[39m alpha = [32m2[39m
+[32m     13[39m nsteps = [32m40[39m
+[32m     14[39m dt = alpha * dx**[32m2[39m
+[32m---> [39m[32m15[39m AL, AR = construct_matrices(n, alpha)
+[32m     16[39m 
+[32m     17[39m get_ipython().run_line_magic([33m'matplotlib'[39m, [33m''[39m)
+[32m     18[39m plt.imshow(T)
 
-[31mModuleNotFoundError[39m: No module named 'numpy'
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 11[39m, in [36mconstruct_matrices[39m[34m(n, alpha)[39m
+[32m      7[39m     a = -alpha/[32m2[39m*np.ones(n)
+[32m      8[39m     a[[32m0[39m] = [32m0[39m
+[32m      9[39m     c = -alpha/[32m2[39m*np.ones(n)
+[32m     10[39m     c[-[32m1[39m] = [32m0[39m
+[32m---> [39m[32m11[39m     AL = np.row_stack((a,b,c))
+[32m     12[39m 
+[32m     13[39m     [38;5;28;01mreturn[39;00m AL, AR
+
+[36mFile [39m[32m~/projects_local/phys512_dev/venv/lib/python3.14/site-packages/numpy/__init__.py:769[39m, in [36m__getattr__[39m[34m(attr)[39m
+[32m    762[39m [38;5;28;01mif[39;00m attr [38;5;129;01min[39;00m __expired_attributes__:
+[32m    763[39m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(
+[32m    764[39m         [33mf[39m[33m"[39m[33m`np.[39m[38;5;132;01m{[39;00mattr[38;5;132;01m}[39;00m[33m` was removed in the NumPy 2.0 release. [39m[33m"[39m
+[32m    765[39m         [33mf[39m[33m"[39m[38;5;132;01m{[39;00m__expired_attributes__[attr][38;5;132;01m}[39;00m[33m"[39m,
+[32m    766[39m         name=[38;5;28;01mNone[39;00m
+[32m    767[39m     )
+[32m--> [39m[32m769[39m [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m([33mf[39m[33m"[39m[33mmodule [39m[38;5;132;01m{[39;00m[34m__name__[39m[38;5;132;01m!r}[39;00m[33m has no attribute [39m[38;5;132;01m{[39;00mattr[38;5;132;01m!r}[39;00m[33m"[39m)
+
+[31mAttributeError[39m: module 'numpy' has no attribute 'row_stack'
 

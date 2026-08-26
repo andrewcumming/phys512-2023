@@ -31,17 +31,97 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.linalg
-from scipy.integrate import solve_ivp, simpson
+
+def do_int(n, dt, show_plots=False, interp='Spline'):
+    x = np.linspace(0, 1, n)
+
+    # Initial profile has T=1 everywhere except T=0 at the outer boundary
+    T = 100 * np.ones(n)
+    #T = 100 * np.cos(np.pi/2 * x)
+    T[-1] = 0.0
+
+    if show_plots:
+        plt.plot(x, T)
+        plt.xlabel(r'$x$')
+        plt.ylabel(r'$T$')
+
+    # read in K from the file
+    xp, Kp = np.loadtxt('data.txt', unpack=True)
+    if interp == 'Spline':
+        Kinterp = scipy.interpolate.CubicSpline(xp,Kp)
+        K = Kinterp(x)
+    else:
+        K = np.interp(x,xp,Kp)  # linear interpolation
+    dx = x[1]-x[0]
+    alpha = K * dt/dx**2     # alpha here depends on position
+    print("n=", n, " dt=", dt, " max alpha=", np.max(alpha))
+    nsteps = int(1.0/dt)
+
+    # Calculate the matrix A in banded form
+    b = (1 + 2*alpha)
+    b[0] = 1 + alpha[0] # insulating boundary at x=0
+    a = np.zeros(n)
+    c = np.zeros(n)
+    c[:-1] = -alpha[1:]    # upper and lower diagonals need the right values of alpha
+    a[1:] = -alpha[:-1]    # a is on the upper diagonal so needs to start with alpha_0, whereas c
+                         # on the lower diagonal should start with alpha_1
+    AA = np.row_stack((a,b,c))
+
+    Tb = np.zeros(nsteps)
+    Tb[0] = T[0]
+    for i in range(1,nsteps):
+        T = scipy.linalg.solve_banded((1,1), AA, T)
+        Tb[i] = T[0]
+        if show_plots:
+            if (i % (nsteps//10) == 0):
+                plt.plot(x, T)
+    if show_plots:   
+        plt.xlim((0,1))
+        plt.show()
+        plt.clf()
+        plt.plot(np.arange(nsteps)*dt, Tb)
+        plt.xlabel(r'$t$')
+        plt.ylabel(r'$T_{base}$')
+        plt.show()
+    
+    return Tb[-1]
+
+Tb = do_int(1000, 1e-2, show_plots=True)
+print("T base at 1 second = ", Tb)
 ------------------
 
+----- stdout -----
+n= 1000  dt= 0.01  max alpha= 9980.051923381965
+------------------
 
 [31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
-[32m      3[39m [38;5;28;01mimport[39;00m scipy.linalg
-[32m      4[39m [38;5;28;01mfrom[39;00m scipy.integrate [38;5;28;01mimport[39;00m solve_ivp, simpson
+[31mAttributeError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[9][39m[32m, line 59[39m
+[32m     55[39m         plt.show()
+[32m     56[39m 
+[32m     57[39m     [38;5;28;01mreturn[39;00m Tb[-[32m1[39m]
+[32m     58[39m 
+[32m---> [39m[32m59[39m Tb = do_int([32m1000[39m, [32m1e-2[39m, show_plots=[38;5;28;01mTrue[39;00m)
+[32m     60[39m print([33m"T base at 1 second = "[39m, Tb)
 
-[31mModuleNotFoundError[39m: No module named 'numpy'
+[36mCell[39m[36m [39m[32mIn[9][39m[32m, line 38[39m, in [36mdo_int[39m[34m(n, dt, show_plots, interp)[39m
+[32m     34[39m     c = np.zeros(n)
+[32m     35[39m     c[:-[32m1[39m] = -alpha[[32m1[39m:]    [38;5;66;03m# upper and lower diagonals need the right values of alpha[39;00m
+[32m     36[39m     a[[32m1[39m:] = -alpha[:-[32m1[39m]    [38;5;66;03m# a is on the upper diagonal so needs to start with alpha_0, whereas c[39;00m
+[32m     37[39m                          [38;5;66;03m# on the lower diagonal should start with alpha_1[39;00m
+[32m---> [39m[32m38[39m     AA = np.row_stack((a,b,c))
+[32m     39[39m 
+[32m     40[39m     Tb = np.zeros(nsteps)
+[32m     41[39m     Tb[[32m0[39m] = T[[32m0[39m]
+
+[36mFile [39m[32m~/projects_local/phys512_dev/venv/lib/python3.14/site-packages/numpy/__init__.py:769[39m, in [36m__getattr__[39m[34m(attr)[39m
+[32m    762[39m [38;5;28;01mif[39;00m attr [38;5;129;01min[39;00m __expired_attributes__:
+[32m    763[39m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(
+[32m    764[39m         [33mf[39m[33m"[39m[33m`np.[39m[38;5;132;01m{[39;00mattr[38;5;132;01m}[39;00m[33m` was removed in the NumPy 2.0 release. [39m[33m"[39m
+[32m    765[39m         [33mf[39m[33m"[39m[38;5;132;01m{[39;00m__expired_attributes__[attr][38;5;132;01m}[39;00m[33m"[39m,
+[32m    766[39m         name=[38;5;28;01mNone[39;00m
+[32m    767[39m     )
+[32m--> [39m[32m769[39m [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m([33mf[39m[33m"[39m[33mmodule [39m[38;5;132;01m{[39;00m[34m__name__[39m[38;5;132;01m!r}[39;00m[33m has no attribute [39m[38;5;132;01m{[39;00mattr[38;5;132;01m!r}[39;00m[33m"[39m)
+
+[31mAttributeError[39m: module 'numpy' has no attribute 'row_stack'
 

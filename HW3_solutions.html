@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -409,7 +409,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -426,7 +426,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2FHW3_solutions.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys512-2023/issues/new?title=Issue%20on%20page%20%2FHW3_solutions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -675,16 +675,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/953d098d0d5968a88b91f40bc16713b6da265a3e4e77394b6d436ad738390e07.png" src="_images/953d098d0d5968a88b91f40bc16713b6da265a3e4e77394b6d436ad738390e07.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time taken =  4.139789581298828
 </pre></div>
 </div>
 </div>
@@ -717,8 +712,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cb0800f11fdd06f9088927f58b9aa7fc27f44a535b5c104af75ce8562948aa2e.png" src="_images/cb0800f11fdd06f9088927f58b9aa7fc27f44a535b5c104af75ce8562948aa2e.png" />
-<img alt="_images/5aaa23ffde33c62f0c2ff5e8f2aef0e1837d7a90c3fdac8c48c47b307d43e77b.png" src="_images/5aaa23ffde33c62f0c2ff5e8f2aef0e1837d7a90c3fdac8c48c47b307d43e77b.png" />
+<img alt="_images/386939d3dc335f5b84817a73b34f6180c00f6bac880cdf8800707545eca56902.png" src="_images/386939d3dc335f5b84817a73b34f6180c00f6bac880cdf8800707545eca56902.png" />
+<img alt="_images/1d144ce02437e91f75a609d7d7a7bff4e9bc14ab4f970c1e36b6d1c88c047f6f.png" src="_images/1d144ce02437e91f75a609d7d7a7bff4e9bc14ab4f970c1e36b6d1c88c047f6f.png" />
 </div>
 </div>
 <p>The growth of the crystal depends on the density of liquid particles. When the density is low (try running this for <span class="math notranslate nohighlight">\(N=2500\)</span> instead of <span class="math notranslate nohighlight">\(N=10^4\)</span>), the growth is limited by the rate at which particles can diffuse to the crystallization front. The time when the crystal reaches radius <span class="math notranslate nohighlight">\(r\)</span> is given by the diffusion time corresponding to that distance, ie.</p>
@@ -827,18 +822,30 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  1.0
-T =  1.5000000000000004
-T =  2.000000000000001
-T =  2.5000000000000013
-T =  3.0000000000000018
-T =  3.500000000000002
-T =  4.000000000000003
-time =  23.00921607017517
 </pre></div>
 </div>
-<img alt="_images/894355afebbf6d3a3b7c9601904ba62e20437d047196cbab7a40025b30690e45.png" src="_images/894355afebbf6d3a3b7c9601904ba62e20437d047196cbab7a40025b30690e45.png" />
-<img alt="_images/c616663a26daf4516c25ede5d98c3811c95981e7541e5f4650658cb7172cfe88.png" src="_images/c616663a26daf4516c25ede5d98c3811c95981e7541e5f4650658cb7172cfe88.png" />
-<img alt="_images/5fc2b075510d4e929b5f3143d04f423ffe4fd3f096fe5bd7e828f02d5d533860.png" src="_images/5fc2b075510d4e929b5f3143d04f423ffe4fd3f096fe5bd7e828f02d5d533860.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  1.5000000000000004
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  2.000000000000001
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  2.5000000000000013
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  3.0000000000000018
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  3.500000000000002
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T =  4.000000000000003
+time =  15.96493148803711
+</pre></div>
+</div>
+<img alt="_images/d63a577463d56e18f624770abdd903f04672b7de83e7a659fe2eea805661c2a0.png" src="_images/d63a577463d56e18f624770abdd903f04672b7de83e7a659fe2eea805661c2a0.png" />
+<img alt="_images/3b9a1692f0356cb6cc1fb4d67d092abdd00f3922818fa86c082fe3c5ea603d4b.png" src="_images/3b9a1692f0356cb6cc1fb4d67d092abdd00f3922818fa86c082fe3c5ea603d4b.png" />
+<img alt="_images/dd967f696cea279c9f7de303ea6161800d3a02b1ce53780ac5d52b7d95ed1168.png" src="_images/dd967f696cea279c9f7de303ea6161800d3a02b1ce53780ac5d52b7d95ed1168.png" />
 </div>
 </div>
 </section>

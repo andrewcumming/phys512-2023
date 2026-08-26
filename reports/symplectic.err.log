@@ -28,16 +28,27 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plt
+# Check this using "SymPy" which does symbolic calculations
+# you may need to 'pip install sympy'
+import sympy.matrices
+h = sympy.Symbol('h')
+a = sympy.matrices.Matrix([[1,h],[0,1]])
+b = sympy.matrices.Matrix([[1,0],[-h,1]])
+J = a*b
+print(J)
+print('Determinant = ', J.det())
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
-[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 3[39m
+[32m      1[39m [38;5;66;03m# Check this using "SymPy" which does symbolic calculations[39;00m
+[32m      2[39m [38;5;66;03m# you may need to 'pip install sympy'[39;00m
+[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m sympy.matrices
+[32m      4[39m h = sympy.Symbol([33m'h'[39m)
+[32m      5[39m a = sympy.matrices.Matrix([[[32m1[39m,h],[[32m0[39m,[32m1[39m]])
+[32m      6[39m b = sympy.matrices.Matrix([[[32m1[39m,[32m0[39m],[-h,[32m1[39m]])
 
-[31mModuleNotFoundError[39m: No module named 'numpy'
+[31mModuleNotFoundError[39m: No module named 'sympy'
 
