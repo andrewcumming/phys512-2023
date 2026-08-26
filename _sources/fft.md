@@ -2,7 +2,7 @@
 
 The goal today is to become familiar with the discrete Fourier transform (DFT) routines in numpy ([numpy.fft](https://numpy.org/doc/stable/reference/routines.fft.html) - scroll to the bottom of the page to see the description of DFTs and how they are implemented) and scipy ([scipy.fft](https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.fft.html)).
 
-To do this, let's continue the 2D diffusion example from last time, in which we [evolved a Gaussian temperature profile](https://andrewcumming.github.io/phys512/adi.html).
+To do this, let's continue the 2D diffusion example from last time, in which we [evolved a Gaussian temperature profile](https://andrewcumming.github.io/phys512-2023/adi.html).
 If you've solved the diffusion equation analytically before, you likely did it using Fourier methods. The Fourier transform of the temperature field can be written
 
 $$\tilde{T}(k_x, k_y, t) = \int T(x,y,t) e^{-ik_x x}e^{-ik_y y}\ dx dy$$
@@ -57,7 +57,7 @@ Useful functions:
 - [numpy.fft.fftfreq](https://numpy.org/doc/stable/reference/generated/numpy.fft.fftfreq.html) - an easy way to get a list of the $k_x$ or $k_y$ values
 - [numpy.fft.ifft2](https://numpy.org/doc/stable/reference/generated/numpy.fft.ifft2.html) - compute the inverse transform
 
-[[Solution]](https://andrewcumming.github.io/phys512/fft_solutions.html#discrete-fourier-transform)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/fft_solutions.html#discrete-fourier-transform)
 
 ```
 
@@ -87,7 +87,7 @@ Here are some things you can do to become more familiar with DFTs:
 - Next, divide $F(k)$ by $ik$ and again plot the power spectrum on a log-log plot. Take the inverse transform to get the modified function $g(x)$ and plot $g(x)$ against $x$.
 - Take the first half of the $g(x)$ values as $x$ and the second half as $y$ and plot the $(x,y)$ points. What do you see?
 
-[[Solution]](https://andrewcumming.github.io/phys512/fft_1d_solutions.html#more-on-the-1d-dft)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/fft_1d_solutions.html#more-on-the-1d-dft)
 
 ```
 

@@ -40,7 +40,7 @@ Also, investigate what happens when you change your starting value of $x$. How l
 
 Compare your results with the same plots for $10^4$ values from $f(x)$ chosen by the rejection method.
 
-[[Solution]](https://andrewcumming.github.io/phys512/montecarlo_solutions.html)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/montecarlo_solutions.html)
 
 ```
 
@@ -132,7 +132,7 @@ Plot the radial velocity curve $v(t)$ corresponding to the last set of parameter
 
 Plot histograms of the 5 parameters. Also look at 2D histograms for different pairs of parameters: do you see any correlations between parameters?
 
-[[Solution]](https://andrewcumming.github.io/phys512/metropolis_solutions.html#exoplanet-orbit)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/metropolis_solutions.html#exoplanet-orbit)
 
 ```
 

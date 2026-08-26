@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -559,7 +559,7 @@
 <h1>Homework 1<a class="headerlink" href="#homework-1" title="Link to this heading">#</a></h1>
 <p>Due on Tuesday September 19 by midnight.</p>
 <section id="roundoff-error-in-long-term-integrations-of-planetary-orbits-solution">
-<h2>1. Roundoff error in long term integrations of planetary orbits    <a class="reference external" href="https://andrewcumming.github.io/phys512/HW1_solutions.html#long-term-planetary-orbits">[Solution]</a><a class="headerlink" href="#roundoff-error-in-long-term-integrations-of-planetary-orbits-solution" title="Link to this heading">#</a></h2>
+<h2>1. Roundoff error in long term integrations of planetary orbits    <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/HW1_solutions.html#long-term-planetary-orbits">[Solution]</a><a class="headerlink" href="#roundoff-error-in-long-term-integrations-of-planetary-orbits-solution" title="Link to this heading">#</a></h2>
 <p>Roundoff errors can accumulate in situations where you have to carry out a sequence of many operations. Modelling the growth of the error over <span class="math notranslate nohighlight">\(N\)</span> operations as a random walk gives <em>Brouwer’s law</em> which states that the total error after <span class="math notranslate nohighlight">\(N\)</span> steps will be <span class="math notranslate nohighlight">\(\approx \sqrt{N} \epsilon\)</span> (where <span class="math notranslate nohighlight">\(\epsilon \sim 10^{-16}\)</span> for double precision floats).</p>
 <p>A classic example of this is when integrating planetary orbits. One method for doing this is the <em>semi-implicit Euler method</em>, which involves updating the velocity and position of the planet from timestep <span class="math notranslate nohighlight">\(n\)</span> to timestep <span class="math notranslate nohighlight">\(n+1\)</span> according to</p>
 <div class="math notranslate nohighlight">
@@ -576,7 +576,7 @@ Start with a timestep of <span class="math notranslate nohighlight">\(0.1\)</spa
 [If you want to see an example of a <em>more</em> accurate (higher order) method, look at <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2015MNRAS.446.1424R/abstract">Rein and Spiegel 2015</a>, which implements a 15th order integrator! Compare your results here with their Figure 1 for example.]</p>
 </section>
 <section id="interpolation-and-thermodynamics-solution">
-<h2>2. Interpolation and thermodynamics    <a class="reference external" href="https://andrewcumming.github.io/phys512/HW1_solutions.html#interpolation-and-thermodynamics">[Solution]</a><a class="headerlink" href="#interpolation-and-thermodynamics-solution" title="Link to this heading">#</a></h2>
+<h2>2. Interpolation and thermodynamics    <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/HW1_solutions.html#interpolation-and-thermodynamics">[Solution]</a><a class="headerlink" href="#interpolation-and-thermodynamics-solution" title="Link to this heading">#</a></h2>
 <p>Interpolation can be tricky in thermodynamics, where there are particular requirements on derivatives that need to be satisfied. We’ll investigate that in this question by looking at an ideal gas in a range of temperatures and densities appropriate for Earth’s atmosphere. The pressure and entropy per particle of an ideal gas are given by</p>
 <div class="math notranslate nohighlight">
 \[P = nk_BT, \hspace{1cm} S = k_B \left({5\over 2}-\ln \left({n\over n_Q} \right) \right)\]</div>

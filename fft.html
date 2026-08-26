@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -557,7 +557,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="discrete-fourier-transform">
 <h1>Discrete Fourier transform<a class="headerlink" href="#discrete-fourier-transform" title="Link to this heading">#</a></h1>
 <p>The goal today is to become familiar with the discrete Fourier transform (DFT) routines in numpy (<a class="reference external" href="https://numpy.org/doc/stable/reference/routines.fft.html">numpy.fft</a> - scroll to the bottom of the page to see the description of DFTs and how they are implemented) and scipy (<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.fft.html">scipy.fft</a>).</p>
-<p>To do this, let’s continue the 2D diffusion example from last time, in which we <a class="reference external" href="https://andrewcumming.github.io/phys512/adi.html">evolved a Gaussian temperature profile</a>.
+<p>To do this, let’s continue the 2D diffusion example from last time, in which we <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/adi.html">evolved a Gaussian temperature profile</a>.
 If you’ve solved the diffusion equation analytically before, you likely did it using Fourier methods. The Fourier transform of the temperature field can be written</p>
 <div class="math notranslate nohighlight">
 \[\tilde{T}(k_x, k_y, t) = \int T(x,y,t) e^{-ik_x x}e^{-ik_y y}\ dx dy\]</div>
@@ -603,7 +603,7 @@ If you’ve solved the diffusion equation analytically before, you likely did it
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.fft.fftfreq.html">numpy.fft.fftfreq</a> - an easy way to get a list of the <span class="math notranslate nohighlight">\(k_x\)</span> or <span class="math notranslate nohighlight">\(k_y\)</span> values</p></li>
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.fft.ifft2.html">numpy.fft.ifft2</a> - compute the inverse transform</p></li>
 </ul>
-<p><a class="reference external" href="https://andrewcumming.github.io/phys512/fft_solutions.html#discrete-fourier-transform">[Solution]</a></p>
+<p><a class="reference external" href="https://andrewcumming.github.io/phys512-2023/fft_solutions.html#discrete-fourier-transform">[Solution]</a></p>
 </div>
 <div class="admonition-exercise-1d-dfts admonition">
 <p class="admonition-title">Exercise: 1D DFTs</p>
@@ -635,7 +635,7 @@ If you’ve solved the diffusion equation analytically before, you likely did it
 <li><p>Next, divide <span class="math notranslate nohighlight">\(F(k)\)</span> by <span class="math notranslate nohighlight">\(ik\)</span> and again plot the power spectrum on a log-log plot. Take the inverse transform to get the modified function <span class="math notranslate nohighlight">\(g(x)\)</span> and plot <span class="math notranslate nohighlight">\(g(x)\)</span> against <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
 <li><p>Take the first half of the <span class="math notranslate nohighlight">\(g(x)\)</span> values as <span class="math notranslate nohighlight">\(x\)</span> and the second half as <span class="math notranslate nohighlight">\(y\)</span> and plot the <span class="math notranslate nohighlight">\((x,y)\)</span> points. What do you see?</p></li>
 </ul>
-<p><a class="reference external" href="https://andrewcumming.github.io/phys512/fft_1d_solutions.html#more-on-the-1d-dft">[Solution]</a></p>
+<p><a class="reference external" href="https://andrewcumming.github.io/phys512-2023/fft_1d_solutions.html#more-on-the-1d-dft">[Solution]</a></p>
 </div>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>

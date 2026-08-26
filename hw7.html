@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -559,7 +559,7 @@
 <h1>Homework 7<a class="headerlink" href="#homework-7" title="Link to this heading">#</a></h1>
 <p>Due on Tuesday Dec 5 by midnight.</p>
 <section id="zero-padding-the-cross-correlation-function-solution">
-<h2>1. Zero-padding the cross-correlation function  <a class="reference external" href="https://andrewcumming.github.io/phys512/HW7_solutions.html#cross-correlation-function">[Solution]</a><a class="headerlink" href="#zero-padding-the-cross-correlation-function-solution" title="Link to this heading">#</a></h2>
+<h2>1. Zero-padding the cross-correlation function  <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/HW7_solutions.html#cross-correlation-function">[Solution]</a><a class="headerlink" href="#zero-padding-the-cross-correlation-function-solution" title="Link to this heading">#</a></h2>
 <p>The cross-correlation of two functions <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[(f\star g)(y) = \int f(x) g(x+y) dx.\]</div>
@@ -572,7 +572,7 @@
 <p>(c) Try part (b) without zero-padding the DFTs. What difference does it make? What part of the cross-correlation function is computed in this case?</p>
 </section>
 <section id="diffusion-again-but-this-time-with-chebyshev-polynomials-solution">
-<h2>2. Diffusion again(!) but this time with Chebyshev polynomials  <a class="reference external" href="https://andrewcumming.github.io/phys512/HW7_solutions.html#chebyshev-polynomials">[Solution]</a><a class="headerlink" href="#diffusion-again-but-this-time-with-chebyshev-polynomials-solution" title="Link to this heading">#</a></h2>
+<h2>2. Diffusion again(!) but this time with Chebyshev polynomials  <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/HW7_solutions.html#chebyshev-polynomials">[Solution]</a><a class="headerlink" href="#diffusion-again-but-this-time-with-chebyshev-polynomials-solution" title="Link to this heading">#</a></h2>
 <p>Write a code that solves the diffusion equation</p>
 <div class="math notranslate nohighlight">
 \[{\partial f\over \partial t} = {\partial^2 f\over \partial x^2}\]</div>
@@ -582,8 +582,8 @@
 <p>where <span class="math notranslate nohighlight">\(T_i(x)\)</span> is the <span class="math notranslate nohighlight">\(i\)</span>th Chebyshev polynomial and <span class="math notranslate nohighlight">\(a_i(t)\)</span> are coefficients that you evolve in time. As a test problem, take the initial <span class="math notranslate nohighlight">\(f(x)\)</span> to be the Green’s function for the diffusion equation evaluated at an initial time <span class="math notranslate nohighlight">\(t=t_0\)</span> and evolve it forwards in time, comparing with the analytic solution. Check how the error compared to the analytic solution depends on the number of modes that you include in your Chebyshev series. Comment on how the scaling compares with what you would expect from finite differences.</p>
 <p>Hints:</p>
 <ul class="simple">
-<li><p>if you need a reminder of what the Chebyshev polynomials look like, you can look at our earlier discussion of <a class="reference external" href="https://andrewcumming.github.io/phys512/polynomial_fit.html#orthogonal-polynomials">orthogonal polynomials</a>.</p></li>
-<li><p>you can fit a Chebyshev series to your initial <span class="math notranslate nohighlight">\(f(x)\)</span> using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.chebfit.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.chebyshev.chebfit</span></code></a> or use the code from the <a class="reference external" href="https://andrewcumming.github.io/phys512/polynomial_fit_solutions.html">orthogonal polynomial solutions</a>.</p></li>
+<li><p>if you need a reminder of what the Chebyshev polynomials look like, you can look at our earlier discussion of <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/polynomial_fit.html#orthogonal-polynomials">orthogonal polynomials</a>.</p></li>
+<li><p>you can fit a Chebyshev series to your initial <span class="math notranslate nohighlight">\(f(x)\)</span> using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.chebfit.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.chebyshev.chebfit</span></code></a> or use the code from the <a class="reference external" href="https://andrewcumming.github.io/phys512-2023/polynomial_fit_solutions.html">orthogonal polynomial solutions</a>.</p></li>
 <li><p>you should use an even number of polynomials in your Chebyshev series.</p></li>
 <li><p>once you have the initial coefficients <span class="math notranslate nohighlight">\(a_i\)</span>, you can evolve them in time with a first order explicit Euler update.</p></li>
 <li><p>to calculate <span class="math notranslate nohighlight">\(da_i/dt\)</span> you can use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.chebder.html"><code class="docutils literal notranslate"><span class="pre">np.polynomial.chebyshev.chebder</span></code></a> to obtain the coefficients of a Chebyshev series representing the second derivative <span class="math notranslate nohighlight">\(\partial^2 f/\partial x^2\)</span>.</p></li>
