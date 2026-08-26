@@ -11,7 +11,7 @@ only_build_toc_files: yes
 # See https://jupyterbook.org/content/execute.html
 # was set to force
 execute:
-  execute_notebooks: auto
+  execute_notebooks: force
   exclude_patterns:
       - 'ml*'
 
