@@ -25,7 +25,7 @@ In each case, take the number of samples to be $N=10^4$ and repeat the integrati
 
 Repeat for different $N$ values. How does the error in your value for the integral scale with $N$?
 
-[[Solution]](https://andrewcumming.github.io/phys512/montecarlo_solutions.html)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/montecarlo_solutions.html)
 
 ```
 

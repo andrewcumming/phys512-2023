@@ -34,7 +34,7 @@ for some constant $\alpha$ (for the explicit method you will need to choose $\al
  
 For $f_0(x)$, try using a Gaussian, sine wave, or top hat and see how it changes the result.
 
-[[Solution]](https://andrewcumming.github.io/phys512/adv_diff_fourier.html#advection-diffusion-with-fourier)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/adv_diff_fourier.html#advection-diffusion-with-fourier)
 
 ```
 
@@ -56,7 +56,7 @@ $$f^{n+1}_i = f^{n-1}_i - {v\Delta t\over 2\Delta x}\left(f^n_{i+1} - f^n_{i-1}\
 
 You can use **operator splitting** to advance in time: apply the advection update and diffusion update alternately to your solution.
 
-[[Solution]](https://andrewcumming.github.io/phys512/adv_diff_finite_difference.html#advection-diffusion-with-finite-differences)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/adv_diff_finite_difference.html#advection-diffusion-with-finite-differences)
 ```
 
 

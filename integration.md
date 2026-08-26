@@ -72,7 +72,7 @@ $${1\over \pi} \int_{0}^{\pi} \sin^2(x) dx = {1\over 2}.$$
 
 Does the result surprise you? What happened?
 
-[[Solution]](https://andrewcumming.github.io/phys512/integration_solutions.html#newton-cotes)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/integration_solutions.html#newton-cotes)
 
 ```
 
@@ -123,7 +123,7 @@ Hints:
 - to generate a polynomial with degree `N` and random coefficients between -10 and +10 (for example) you can use
 `np.polynomial.Polynomial(np.random.randint(-10,high=10,size=N+1))`
 
-[[Solution]](https://andrewcumming.github.io/phys512/integration_solutions.html#gaussian-quadrature)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/integration_solutions.html#gaussian-quadrature)
 
 ```
 
@@ -150,7 +150,7 @@ Modify your code to use the Gauss-Hermite coefficients and check that you can ge
 
 Hint: If you want to use `scipy.integrate.quad` again to get the value of the integral as a comparison, note that you can give it limits of $-\infty$ to $+\infty$ using `-np.inf` and `np.inf`.
 
-[[Solution]](https://andrewcumming.github.io/phys512/integration_solutions.html#gaussian-quadrature)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/integration_solutions.html#gaussian-quadrature)
 
 ```
 
@@ -173,7 +173,7 @@ For Simpson's rule you can use your own implementation from above or you could t
 
 For Gaussian quadrature, try both Gauss-Hermite and Gauss-Laguerre. Which one is best?
 
-[[Solution]](https://andrewcumming.github.io/phys512/integration_solutions.html#maxwell-boltzmann-distribution)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/integration_solutions.html#maxwell-boltzmann-distribution)
 
 ```
 

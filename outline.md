@@ -92,7 +92,7 @@ Your grade will be based on
 
 - Homeworks (30%), given out every 1-2 weeks during the term. The lowest homework score will be dropped when calculating the final grade. Note that you can discuss homework questions with other students in the course, but you should write your own homework solutions and any code you hand in should be your own.
  
-- Project (30%). In teams of 2-3 students, the project component will involve developing a code to investigate a physics problem of interest to the student. The topic must be decided on and approved by the instructor by early October, and the project will be due at the end of term. For more information and suggestions for topics, see the [Project instructions](https://andrewcumming.github.io/phys512/project_instructions.html).
+- Project (30%). In teams of 2-3 students, the project component will involve developing a code to investigate a physics problem of interest to the student. The topic must be decided on and approved by the instructor by early October, and the project will be due at the end of term. For more information and suggestions for topics, see the [Project instructions](https://andrewcumming.github.io/phys512-2023/project_instructions.html).
 
 - Take-home final exam (40%). A mixture of analytic and computational problems. The take-home exam will be available for a 72 hour period and designed to be completed in 3 hours.
 

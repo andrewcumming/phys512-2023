@@ -54,7 +54,7 @@ def do_integration(omega):
 omega = scipy.optimize.brentq(do_integration, om1, om2)
 ```
 
-[[Solution]](https://andrewcumming.github.io/phys512/bvps.html#shooting-method)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/bvps.html#shooting-method)
 
 ````
 
@@ -106,7 +106,7 @@ Do you get good agreement with the eigenfunctions from the shooting method? How 
 
 You can calculate the Jacobian either by implementing the analytic Jacobian (you will see that the matrix is of tridiagonal form so fairly easy to calculate) or using finite differences.
 
-[[Solution]](https://andrewcumming.github.io/phys512/bvps.html#relaxation-method)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/bvps.html#relaxation-method)
 
 ```
 

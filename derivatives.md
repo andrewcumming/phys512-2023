@@ -24,7 +24,7 @@ $${d^2f\over dx^2} \approx {f(x+\Delta x) -2 f(x) + f(x-\Delta x)\over (\Delta x
 
 Note that these are both second order accurate. In this case, the first derivative is using a *centered difference*.
 
-[[Solution]](https://andrewcumming.github.io/phys512/derivatives_solutions.html#second-order-finite-differences)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/derivatives_solutions.html#second-order-finite-differences)
 
 ```
 
@@ -51,7 +51,7 @@ Next try using a second order derivative (centered difference). Add this to your
 
 Do your results depend on where you calculate the derivative (which value of $x$)? For the first order derivative, do you see the dependence on $f^{\prime\prime}$ predicted by our estimate above?
 
-[[Solution]](https://andrewcumming.github.io/phys512/derivatives_solutions.html#optimal-step-size)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/derivatives_solutions.html#optimal-step-size)
 
 ```
 
@@ -129,7 +129,7 @@ $$f(x) = \exp\left(\sin(x)\right)$$
 
 for different values of $x$. Compare your answer with the analytic expression and with the finite difference gradient.
 
-[[Solution]](https://andrewcumming.github.io/phys512/derivatives_solutions.html#automatic-derivatives)
+[[Solution]](https://andrewcumming.github.io/phys512-2023/derivatives_solutions.html#automatic-derivatives)
 
 
 ```
