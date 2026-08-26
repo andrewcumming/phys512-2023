@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    return np.sin(x)
+
+dx_vals = 10**np.linspace(-13, -1, 100)
+
+x = 1.0 # Evaluate the derivatives at this value of x
+
+err = np.zeros_like(dx_vals)   # to store the fractional error from the 1st order difference
+err2 = np.zeros_like(dx_vals)  # same for the second order
+
+for i, dx in enumerate(dx_vals):
+    dfdx1 = (f(x + dx) - f(x)) / dx
+    err[i] = np.abs((dfdx1 - np.cos(x))/np.cos(x))
+
+    dfdx2 = (f(x + dx) - f(x - dx)) / (2*dx)
+    err2[i] = np.abs((dfdx2 - np.cos(x))/np.cos(x))
+
+# Plot the results
+plt.plot(dx_vals, err, label="First order")
+plt.plot(dx_vals, err2, label="Second order")
+
+plt.ylim((1e-2*min(err2), 1.0))
+
+# and the analytic expressions
+plt.plot(dx_vals, 1e-16 * f(x) / dx_vals, ":", label=r'$\epsilon f(x)/\Delta x$')
+plt.plot(dx_vals, dx_vals, ":", label=r'$\Delta x$')
+plt.plot(dx_vals, dx_vals**2, ":", label=r'$(\Delta x)^2$')
+
+plt.title(r'$f(x) = \sin x, \ \ \ x=%lg$' % (x,))
+plt.yscale('log')
+plt.xscale('log')
+plt.xlabel(r'$\Delta x$')
+plt.ylabel('Fractional error in derivative')
+plt.legend()
+plt.show()
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
+[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
+[32m      3[39m 
+[32m      4[39m [38;5;28;01mdef[39;00m f(x):
+
+[31mModuleNotFoundError[39m: No module named 'numpy'
+

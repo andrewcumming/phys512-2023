@@ -14,45 +14,48 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -60,44 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'HW4_solutions';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Homework 5 solutions" href="HW5_solutions.html" />
     <link rel="prev" title="Homework 3 solutions" href="HW3_solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -105,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,10 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -125,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -140,6 +185,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -153,21 +200,17 @@
     
     
     <img src="_static/plasma.png" class="logo__image only-light" alt="PHYS 512 Computational Physics with Applications - Home"/>
-    <script>document.write(`<img src="_static/plasma.png" class="logo__image only-dark" alt="PHYS 512 Computational Physics with Applications - Home"/>`);</script>
+    <img src="_static/plasma.png" class="logo__image only-dark pst-js-only" alt="PHYS 512 Computational Physics with Applications - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
@@ -185,12 +228,12 @@
 <li class="toctree-l1"><a class="reference internal" href="derivatives.html">Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integration.html">Integration</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="function_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="function_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="derivatives_solutions.html">Derivatives exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interpolation_solutions.html">Interpolation exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="integration_solutions.html">Integration exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Random numbers</span></p>
 <ul class="nav bd-sidenav">
@@ -199,13 +242,13 @@
 <li class="toctree-l1"><a class="reference internal" href="generating_random.html">Probability distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monte_carlo_integration.html">Monte Carlo integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metropolis.html">Metropolis-Hastings algorithm</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="random_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="random_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions.html">Probability distributions Exercise 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions_part2.html">Probability distributions Part 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="montecarlo_solutions.html">Monte Carlo Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metropolis_solutions.html">Metropolis-Hastings</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solving systems of equations</span></p>
 <ul class="nav bd-sidenav">
@@ -214,11 +257,11 @@
 <li class="toctree-l1"><a class="reference internal" href="linear_least_squares.html">Linear least squares</a></li>
 <li class="toctree-l1"><a class="reference internal" href="polynomial_fit.html">Polynomial fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nonlinear.html">Non-linear least squares</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="solving_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="solving_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="polynomial_fit_solutions.html">Orthogonal polynomials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nonlinear_fit.html">Lorentzian fit</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
@@ -236,7 +279,7 @@
 <li class="toctree-l1"><a class="reference internal" href="conjugate_gradient.html">Sparse matrices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical_instability.html">Boundary conditions and numerical stability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diffusion.html">Diffusion in multi-dimensions</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="ode_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ode_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="runge_kutta_solutions.html">Initial value problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bvps.html">Boundary value problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="symplectic_solutions.html">Symplectic integrators</a></li>
@@ -244,7 +287,7 @@
 <li class="toctree-l2"><a class="reference internal" href="numerical_instability_solutions.html">Boundary conditions and numerical stability solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adi.html">Alternating-direction implicit</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spectral methods</span></p>
 <ul class="nav bd-sidenav">
@@ -253,14 +296,14 @@
 <li class="toctree-l1"><a class="reference internal" href="numerical_diffusion.html">Amplitude and phase errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="burgers.html">Burgers’ equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signal_processing.html">Signal processing</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="spectral_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="spectral_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="fft_solutions.html">Discrete Fourier Transform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fft_1d_solutions.html">More on the 1D DFT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adv_diff_fourier.html">Advection-diffusion with Fourier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adv_diff_finite_difference.html">Advection-diffusion with finite differences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LIGO.html">LIGO tutorial: find an inspiral</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Performance</span></p>
 <ul class="nav bd-sidenav">
@@ -282,7 +325,7 @@
 <li class="toctree-l1"><a class="reference internal" href="exam.html">Exam questions and solutions</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="project_instructions.html">Project Instructions</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="homework_solutions.html">Homework solutions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="homework_solutions.html">Homework solutions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="HW1_solutions.html">Homework 1 solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HW2_solutions.html">Homework 2 solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homework_notes/hw2_common_issues.html">Homework 2: Common Issues</a></li>
@@ -306,7 +349,7 @@
 <li class="toctree-l2"><a class="reference internal" href="HW6_solutions.html">Homework 6 solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HW7_solutions.html">Homework 7 solutions</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -315,14 +358,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -331,14 +379,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -447,7 +495,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -461,27 +509,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -501,7 +541,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-svd">1. More on SVD</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-planetary-orbits">2. Fitting planetary orbits</a></li>
 </ul>
@@ -519,14 +559,14 @@ document.write(`
 <h1>Homework 4 solutions<a class="headerlink" href="#homework-4-solutions" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Visualize matrices as a color map</span>
-<span class="k">def</span> <span class="nf">plot_matrices</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">titles</span><span class="o">=</span><span class="p">[]):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_matrices</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">titles</span><span class="o">=</span><span class="p">[]):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">titles</span><span class="o">==</span><span class="p">[]:</span>
-        <span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+        <span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
     <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">:</span>
         <span class="n">nx</span> <span class="o">=</span> <span class="mi">4</span>
     <span class="k">else</span><span class="p">:</span>
@@ -546,16 +586,29 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Visualize matrices as a color map</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named 'numpy'
+</pre></div>
+</div>
+</div>
 </div>
 <section id="more-on-svd">
 <h2>1. More on SVD<a class="headerlink" href="#more-on-svd" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize matrices as a color map</span>
-<span class="k">def</span> <span class="nf">plot_matrices</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">titles</span><span class="o">=</span><span class="p">[]):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_matrices</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">titles</span><span class="o">=</span><span class="p">[]):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">titles</span><span class="o">==</span><span class="p">[]:</span>
-        <span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+        <span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">""</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
     <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">:</span>
         <span class="n">nx</span> <span class="o">=</span> <span class="mi">4</span>
     <span class="k">else</span><span class="p">:</span>
@@ -586,14 +639,14 @@ document.write(`
 
 <span class="n">plot_matrices</span><span class="p">([</span><span class="n">U</span><span class="p">,</span><span class="n">VT</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Singular values are: &quot;</span><span class="p">,</span> <span class="n">Sdiag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Singular values are: "</span><span class="p">,</span> <span class="n">Sdiag</span><span class="p">)</span>
 
 <span class="n">Ak</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">Ak</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span><span class="n">k</span><span class="p">],</span> <span class="n">VT</span><span class="p">[</span><span class="n">k</span><span class="p">,:])</span>
 
-<span class="n">plot_matrices</span><span class="p">(</span><span class="n">Ak</span><span class="p">[:],[</span><span class="s2">&quot;S</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
+<span class="n">plot_matrices</span><span class="p">(</span><span class="n">Ak</span><span class="p">[:],[</span><span class="s2">"S</span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
     
 <span class="n">Ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -607,41 +660,41 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/c3a556a9e1c5b60850b3141f66a6b7abbffd3ae9784d847289d20ad56c7bbe9c.png" src="_images/c3a556a9e1c5b60850b3141f66a6b7abbffd3ae9784d847289d20ad56c7bbe9c.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Singular values are:  [4.38084506 1.18504164 0.99288971 0.71181482 0.57488263 0.16930277]
+<img alt="_images/8feb0950606dd9bf3906bf8365fbcbd2aad51758a92d6729fa2414bfb7ee74e7.png" src="_images/8feb0950606dd9bf3906bf8365fbcbd2aad51758a92d6729fa2414bfb7ee74e7.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Singular values are:  [4.32151325 1.01957157 0.98751419 0.80804232 0.49544436 0.47226612]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/2a0e1157fbb8de7b069759a4575e1f71f1336afdc767cb6d337916494bdbc7bf.png" src="_images/2a0e1157fbb8de7b069759a4575e1f71f1336afdc767cb6d337916494bdbc7bf.png" />
+<img alt="_images/43f163dcc5ed6612124c3a2f24f2e7f76a14002fbd93dfa89b2848e22771660e.png" src="_images/43f163dcc5ed6612124c3a2f24f2e7f76a14002fbd93dfa89b2848e22771660e.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/79931480f06aa7bf83b8142455adea46d78cb7783e8c77c71c7328418c98041a.png" src="_images/79931480f06aa7bf83b8142455adea46d78cb7783e8c77c71c7328418c98041a.png" />
+<img alt="_images/bb61b60aaead9e5e95f81e6fa52efceff67a374f4bc63925a1c6c61953fc54fb.png" src="_images/bb61b60aaead9e5e95f81e6fa52efceff67a374f4bc63925a1c6c61953fc54fb.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/3ee6e6934c60894445fea58c1ec06c1971258d42759b575b9ac9d53c012e9f30.png" src="_images/3ee6e6934c60894445fea58c1ec06c1971258d42759b575b9ac9d53c012e9f30.png" />
+<img alt="_images/5dd570f366ae17eab0031ebbca0410dc1c1a0f1174f7ce31050ef6337bc15c09.png" src="_images/5dd570f366ae17eab0031ebbca0410dc1c1a0f1174f7ce31050ef6337bc15c09.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
  
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;github_logo.png&#39;</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'github_logo.png'</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)[:,:,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">plot_matrices</span><span class="p">([</span><span class="n">A</span><span class="p">])</span>
 
 <span class="n">m</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape = &#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'shape = '</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
 
 <span class="n">U</span><span class="p">,</span> <span class="n">Sdiag</span><span class="p">,</span> <span class="n">VT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">full_matrices</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">nk</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Sdiag</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nk</span><span class="p">,</span><span class="n">nk</span><span class="p">),</span><span class="n">Sdiag</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nk</span><span class="p">,</span><span class="n">nk</span><span class="p">),</span><span class="n">Sdiag</span><span class="p">,</span><span class="s1">'.'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">'log'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">Ak</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
@@ -650,7 +703,7 @@ document.write(`
     <span class="n">Ak</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span><span class="n">k</span><span class="p">],</span> <span class="n">VT</span><span class="p">[</span><span class="n">k</span><span class="p">,:])</span>
 
 <span class="c1"># plot some of the matrices</span>
-<span class="n">plot_matrices</span><span class="p">(</span><span class="n">Ak</span><span class="p">[:</span><span class="mi">12</span><span class="p">],[</span><span class="s2">&quot;S</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
+<span class="n">plot_matrices</span><span class="p">(</span><span class="n">Ak</span><span class="p">[:</span><span class="mi">12</span><span class="p">],[</span><span class="s2">"S</span><span class="si">%d</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
@@ -658,23 +711,23 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/5dd27520f9ebab5bc52e3976338964f052f36a24ce1a5684884e2cdc9c00517d.png" src="_images/5dd27520f9ebab5bc52e3976338964f052f36a24ce1a5684884e2cdc9c00517d.png" />
+<img alt="_images/0304e8b1196d4bb93b522ba3a9da6c39858d75942c2dee145a0f08167b4f28ac.png" src="_images/0304e8b1196d4bb93b522ba3a9da6c39858d75942c2dee145a0f08167b4f28ac.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>shape =  260 262
 </pre></div>
 </div>
-<img alt="_images/b60d00c3bb8c1f05abdb8bf6fd75a3b0dc347ff90e4ca4d6f3844107519c278d.png" src="_images/b60d00c3bb8c1f05abdb8bf6fd75a3b0dc347ff90e4ca4d6f3844107519c278d.png" />
+<img alt="_images/f293808696aa68a0efc38fa1715864bb5ec3ccb6025927dd09429549633e0747.png" src="_images/f293808696aa68a0efc38fa1715864bb5ec3ccb6025927dd09429549633e0747.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/9a00b30a2c1853c6818f58246a82bc9a7498f52424b9cac58785a39d4c81efc4.png" src="_images/9a00b30a2c1853c6818f58246a82bc9a7498f52424b9cac58785a39d4c81efc4.png" />
+<img alt="_images/57db23cf1998e828ae38a8495a4bbd4ee91358d5b16d019dfe07211b477ea1d2.png" src="_images/57db23cf1998e828ae38a8495a4bbd4ee91358d5b16d019dfe07211b477ea1d2.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/c2ba8a90abee55dfb7d55cf5413ca5003e933f19eec3030d7dd68f84c4c72f6a.png" src="_images/c2ba8a90abee55dfb7d55cf5413ca5003e933f19eec3030d7dd68f84c4c72f6a.png" />
+<img alt="_images/21e535f4927f1f088db9d5c1056f939e0ab31f17747d3fe30ba9d8ce0e4c5e78.png" src="_images/21e535f4927f1f088db9d5c1056f939e0ab31f17747d3fe30ba9d8ce0e4c5e78.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/d28abe9fab6e96eeb0591e8d78d99612c04ab863fdfe34b921329694fec33b0d.png" src="_images/d28abe9fab6e96eeb0591e8d78d99612c04ab863fdfe34b921329694fec33b0d.png" />
+<img alt="_images/8715763893776079498b07627c1aa737ca678507efb9878c54fdfdff2ab68356.png" src="_images/8715763893776079498b07627c1aa737ca678507efb9878c54fdfdff2ab68356.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
@@ -690,7 +743,7 @@ document.write(`
     <span class="n">Ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">kmax</span><span class="p">):</span>
         <span class="n">Ar</span> <span class="o">=</span> <span class="n">Ar</span> <span class="o">+</span> <span class="n">Sdiag</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">Ak</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
-    <span class="n">plot_matrices</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">Ar</span><span class="p">,</span> <span class="n">A</span><span class="o">-</span><span class="n">Ar</span><span class="p">],</span> <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> images&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">kmax</span><span class="p">,),</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">])</span>
+    <span class="n">plot_matrices</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">Ar</span><span class="p">,</span> <span class="n">A</span><span class="o">-</span><span class="n">Ar</span><span class="p">],</span> <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s2">"</span><span class="si">%d</span><span class="s2"> images"</span> <span class="o">%</span> <span class="p">(</span><span class="n">kmax</span><span class="p">,),</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -698,51 +751,51 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/26e90847594b35382e813529cce255882a812a5b21445bdd6102530105a2bade.png" src="_images/26e90847594b35382e813529cce255882a812a5b21445bdd6102530105a2bade.png" />
+<img alt="_images/d1bdf617649e6b15baf1e786d45fa3399357df2e43169ae734693663b4a05367.png" src="_images/d1bdf617649e6b15baf1e786d45fa3399357df2e43169ae734693663b4a05367.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/9114de0712460e00667fc5431b69ff455d2f958efd3c17c06026b9a139a211d0.png" src="_images/9114de0712460e00667fc5431b69ff455d2f958efd3c17c06026b9a139a211d0.png" />
+<img alt="_images/e28a7938343bffb9ca50720c302de70349c73338951ffa334d91f33838dd0ef5.png" src="_images/e28a7938343bffb9ca50720c302de70349c73338951ffa334d91f33838dd0ef5.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/ea921dc9d7609455b12208060646a3b083ba26e9c420ca5de05a5c9cdcccb314.png" src="_images/ea921dc9d7609455b12208060646a3b083ba26e9c420ca5de05a5c9cdcccb314.png" />
+<img alt="_images/4cbc5b923afc40d84920d019f9a1f05603150c266b596d49ad5f7673ffeced85.png" src="_images/4cbc5b923afc40d84920d019f9a1f05603150c266b596d49ad5f7673ffeced85.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/038e5233774c7e3f15bc83d519313d0a5b807adaa66a71efb28917033a49bfea.png" src="_images/038e5233774c7e3f15bc83d519313d0a5b807adaa66a71efb28917033a49bfea.png" />
+<img alt="_images/88f783dc6b6a6cd0325123b33e22d29b46ef5cbc463d613b8b71dd927b9f8f6d.png" src="_images/88f783dc6b6a6cd0325123b33e22d29b46ef5cbc463d613b8b71dd927b9f8f6d.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/43b14d13b1103c38a3d2ff544da52d18508e2d928db9cebd83e35de4a27f60ca.png" src="_images/43b14d13b1103c38a3d2ff544da52d18508e2d928db9cebd83e35de4a27f60ca.png" />
+<img alt="_images/bdc0fcf9775c4c2625e8c853ded5c9d7cfa28a3c10151f6b4d37e476005325c3.png" src="_images/bdc0fcf9775c4c2625e8c853ded5c9d7cfa28a3c10151f6b4d37e476005325c3.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/5c98f77e12440c0a5ebda6156011dc2b86465abc5b048bca8c68cf750139a031.png" src="_images/5c98f77e12440c0a5ebda6156011dc2b86465abc5b048bca8c68cf750139a031.png" />
+<img alt="_images/c91947d379d2a658e0a27bc4c351f8ae45a0693b6ee91593608900e10932433e.png" src="_images/c91947d379d2a658e0a27bc4c351f8ae45a0693b6ee91593608900e10932433e.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/b3955b891b941a508cf2a089f6562fc967b68c1d9739c83ebfd9f1845ba7855e.png" src="_images/b3955b891b941a508cf2a089f6562fc967b68c1d9739c83ebfd9f1845ba7855e.png" />
+<img alt="_images/8260448ec91f67df45ca04b3f17ac65da8eca970e7c865d71a93efbd1cd690f3.png" src="_images/8260448ec91f67df45ca04b3f17ac65da8eca970e7c865d71a93efbd1cd690f3.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/5920ef3ec1489ef7b0c99a47e216a1e3d5a04dd2bbf3dde2b26d81b87c309e50.png" src="_images/5920ef3ec1489ef7b0c99a47e216a1e3d5a04dd2bbf3dde2b26d81b87c309e50.png" />
+<img alt="_images/cdb313db4e49b4665f4576998ee040762a49c5341cdb83c87c159f34b8b0d526.png" src="_images/cdb313db4e49b4665f4576998ee040762a49c5341cdb83c87c159f34b8b0d526.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/7d87690611537d2a6cc1efb506319350f3ab0f826f4d649106fd8fe1dbeb6903.png" src="_images/7d87690611537d2a6cc1efb506319350f3ab0f826f4d649106fd8fe1dbeb6903.png" />
+<img alt="_images/fc1a134ecfd0ff7cfabf21b8a81d4b2fec49aa7481d26b26eff41145935c49cb.png" src="_images/fc1a134ecfd0ff7cfabf21b8a81d4b2fec49aa7481d26b26eff41145935c49cb.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/569c8e3b33c0e2dfbf7d6265153f0ceb59a8853a374dce5cae611bf769ed06f3.png" src="_images/569c8e3b33c0e2dfbf7d6265153f0ceb59a8853a374dce5cae611bf769ed06f3.png" />
+<img alt="_images/ad98740f9eee9bb7dd2a27e20f7cc6db01451583869e97589c58de59673070f5.png" src="_images/ad98740f9eee9bb7dd2a27e20f7cc6db01451583869e97589c58de59673070f5.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/6a1706919e27ab5d40b3a0595c5a19a525c6b3f3bda089bec3d17cfe088f91bb.png" src="_images/6a1706919e27ab5d40b3a0595c5a19a525c6b3f3bda089bec3d17cfe088f91bb.png" />
+<img alt="_images/193c3a0080586a59a0545d61d772ffc312800d829a43283f8dc5f8c1a9b9ce27.png" src="_images/193c3a0080586a59a0545d61d772ffc312800d829a43283f8dc5f8c1a9b9ce27.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/f5594d7767337359ecb415e7b9b267776ddf1faab91ea47b438f7899b2220602.png" src="_images/f5594d7767337359ecb415e7b9b267776ddf1faab91ea47b438f7899b2220602.png" />
+<img alt="_images/e79384858e3b7a4011e86125d57594cbd41b06271a91480e900fb394bf981d6b.png" src="_images/e79384858e3b7a4011e86125d57594cbd41b06271a91480e900fb394bf981d6b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -777,15 +830,15 @@ document.write(`
 <h2>2. Fitting planetary orbits<a class="headerlink" href="#fitting-planetary-orbits" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
     <span class="c1"># Calculates the radial velocity of a star orbited by a planet</span>
     <span class="c1"># at the times in the vector t</span>
     
@@ -799,8 +852,8 @@ document.write(`
     <span class="c1"># velocity amplitude</span>
     <span class="n">K</span> <span class="o">=</span> <span class="mi">204</span> <span class="o">*</span> <span class="n">P</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">mp</span>  <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span><span class="o">-</span><span class="n">e</span><span class="o">*</span><span class="n">e</span><span class="p">)</span> <span class="c1"># m/s</span>
     
-    <span class="c1"># solve Kepler&#39;s equation for the eccentric anomaly E - e * np.sin(E) = M</span>
-    <span class="c1"># Iterative method from Heintz DW, &quot;Double stars&quot;, Reidel, 1978</span>
+    <span class="c1"># solve Kepler's equation for the eccentric anomaly E - e * np.sin(E) = M</span>
+    <span class="c1"># Iterative method from Heintz DW, "Double stars", Reidel, 1978</span>
     <span class="c1"># first guess</span>
     <span class="n">E</span> <span class="o">=</span> <span class="n">M</span> <span class="o">+</span> <span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>  <span class="o">+</span> <span class="p">((</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -821,7 +874,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rv_model</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rv_model</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
     <span class="n">A</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)])</span>
     <span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-8</span>
@@ -845,7 +898,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Observations</span>
 <span class="c1"># These are for HD145675 from Butler et al. 2003</span>
-<span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;rvs.txt&#39;</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">'rvs.txt'</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># initial guess</span>
 <span class="c1"># P, mp, e, omega, tp, v0 </span>
@@ -879,7 +932,7 @@ document.write(`
     <span class="n">r1</span> <span class="o">=</span> <span class="p">(</span><span class="n">v1</span><span class="o">-</span><span class="n">vobs</span><span class="p">)</span><span class="o">/</span><span class="n">eobs</span>
     <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">err1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">r1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;err = </span><span class="si">%lg</span><span class="s2">, a=(</span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">), lam = </span><span class="si">%lg</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">err1</span> <span class="p">,</span><span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">lam</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"err = </span><span class="si">%lg</span><span class="s2">, a=(</span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">, </span><span class="si">%lg</span><span class="s2">), lam = </span><span class="si">%lg</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">err1</span> <span class="p">,</span><span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a1</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">lam</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">err1</span> <span class="o">&gt;</span> <span class="n">err</span><span class="p">:</span>
         <span class="n">lam</span> <span class="o">=</span> <span class="n">lam</span> <span class="o">*</span> <span class="mi">10</span>
     <span class="k">else</span><span class="p">:</span>
@@ -888,7 +941,7 @@ document.write(`
         <span class="k">if</span> <span class="p">(</span><span class="n">err</span><span class="o">-</span><span class="n">err1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">:</span>
             <span class="k">break</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best-fit parameters: M = </span><span class="si">%lg</span><span class="s2">, e = </span><span class="si">%lg</span><span class="s2">, omega = </span><span class="si">%lg</span><span class="s2">, tP = </span><span class="si">%lg</span><span class="s2">, v0 = </span><span class="si">%lg</span><span class="s2"> &quot;</span> <span class="o">%</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Best-fit parameters: M = </span><span class="si">%lg</span><span class="s2">, e = </span><span class="si">%lg</span><span class="s2">, omega = </span><span class="si">%lg</span><span class="s2">, tP = </span><span class="si">%lg</span><span class="s2">, v0 = </span><span class="si">%lg</span><span class="s2"> "</span> <span class="o">%</span> 
       <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
 </pre></div>
 </div>
@@ -931,17 +984,17 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">tobs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tobs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">),</span> <span class="s1">&#39;C0&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="s1">&#39;C1.&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">ecolor</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$v$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$t$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">P</span><span class="p">,</span> <span class="n">a</span><span class="p">),</span> <span class="s1">'C0'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="s1">'C1.'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">'none'</span><span class="p">,</span> <span class="n">ecolor</span><span class="o">=</span><span class="s1">'C1'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">'$v$'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">'$t$'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1171a630eeb1cde4600515cf88fd51daab9feb0338a247e555b043a26503dcac.png" src="_images/1171a630eeb1cde4600515cf88fd51daab9feb0338a247e555b043a26503dcac.png" />
+<img alt="_images/e4d0f77db3503360e1a805cc4106d490cdae984f4fb60591bc84991f8ebec898.png" src="_images/e4d0f77db3503360e1a805cc4106d490cdae984f4fb60591bc84991f8ebec898.png" />
 </div>
 </div>
 <p>Note that the eccentricity from the fit comes out negative, this is because of a degeneracy between <span class="math notranslate nohighlight">\(e\)</span> and the angles <span class="math notranslate nohighlight">\(\omega_P\)</span> and <span class="math notranslate nohighlight">\(t_P\)</span>. By adjusting these, we can fix the eccentricity to be positive:</p>
@@ -952,26 +1005,26 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 <span class="c1"># Change the sign of eccentricity</span>
 <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="n">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">P</span><span class="p">,</span> <span class="n">a2</span><span class="p">),</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Change sign of $e$ to positive&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">P</span><span class="p">,</span> <span class="n">a2</span><span class="p">),</span> <span class="s1">'C0'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'Change sign of $e$ to positive'</span><span class="p">)</span>
 
 <span class="n">a3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="n">a3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">a3</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">P</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="n">P</span>
 <span class="n">a3</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">P</span><span class="p">,</span> <span class="n">a3</span><span class="p">),</span> <span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Also adjust $\omega+\pi$, $t_P+P/2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">rv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">P</span><span class="p">,</span> <span class="n">a3</span><span class="p">),</span> <span class="s1">'C2'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'Also adjust $\omega+\pi$, $t_P+P/2$'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="s1">&#39;C1.&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">ecolor</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$v$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="s1">'C1.'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">'none'</span><span class="p">,</span> <span class="n">ecolor</span><span class="o">=</span><span class="s1">'C1'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">'$v$'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$t$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">'$t$'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3bac065ce80545e1dd15707203e258c5b7a9abd321eae41b605828a2b2c066bb.png" src="_images/3bac065ce80545e1dd15707203e258c5b7a9abd321eae41b605828a2b2c066bb.png" />
+<img alt="_images/2e47893bde0c5e7af4b32baa1568844174cc700e9753103bd53456ca4eb04d53.png" src="_images/2e47893bde0c5e7af4b32baa1568844174cc700e9753103bd53456ca4eb04d53.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -997,13 +1050,13 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="mi">56123</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span><span class="p">):</span>
     <span class="n">chisq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(((</span><span class="n">vobs</span><span class="o">-</span><span class="n">rv</span><span class="p">(</span><span class="n">tobs</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="n">eobs</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">-</span><span class="n">chisq</span><span class="o">/</span><span class="mi">2</span>
 
 <span class="c1"># Observations</span>
 <span class="c1"># These are for HD145675 from Butler et al. 2003</span>
-<span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;rvs.txt&#39;</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tobs</span><span class="p">,</span> <span class="n">vobs</span><span class="p">,</span> <span class="n">eobs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">'rvs.txt'</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Number of samples to generate</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
@@ -1035,7 +1088,7 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
     <span class="k">else</span><span class="p">:</span>
         <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Acceptance fraction = </span><span class="si">%g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">count</span><span class="o">/</span><span class="n">N</span><span class="p">,))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Acceptance fraction = </span><span class="si">%g</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">count</span><span class="o">/</span><span class="n">N</span><span class="p">,))</span>
 
 <span class="c1"># Reject the burn in phase</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.3</span><span class="o">*</span><span class="n">N</span><span class="p">):]</span>
@@ -1047,7 +1100,7 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceptance fraction = 0.39794
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acceptance fraction = 0.397
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1109,7 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot to make sure everything looks ok</span>
 
-<span class="n">titles</span> <span class="o">=</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$M/MJ$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$e$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\omega$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_P$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$v_0$&#39;</span><span class="p">)</span>
+<span class="n">titles</span> <span class="o">=</span> <span class="p">(</span><span class="sa">r</span><span class="s1">'$M/MJ$'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'$e$'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'$\omega$'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'$t_P$'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'$v_0$'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">title</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">titles</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
@@ -1067,15 +1120,15 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2ed896a3bf5fb53c98b769050cebbeede4bb5ff55fe751a3cc350cbc4ad07650.png" src="_images/2ed896a3bf5fb53c98b769050cebbeede4bb5ff55fe751a3cc350cbc4ad07650.png" />
+<img alt="_images/caf1f6a418f7b8dc686b8126781f6ad2f17eeb7b1211ee9900093c533ca81e36.png" src="_images/caf1f6a418f7b8dc686b8126781f6ad2f17eeb7b1211ee9900093c533ca81e36.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compare with the least squares results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;parameter&#39;</span><span class="p">,</span> <span class="s1">&#39;MCMC&#39;</span><span class="p">,</span> <span class="s1">&#39;LS&#39;</span><span class="p">,</span> <span class="s1">&#39;MCMC var&#39;</span><span class="p">,</span> <span class="s1">&#39;LS var&#39;</span><span class="p">,</span> <span class="s1">&#39;frac diff&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="s1">'parameter'</span><span class="p">,</span> <span class="s1">'MCMC'</span><span class="p">,</span> <span class="s1">'LS'</span><span class="p">,</span> <span class="s1">'MCMC var'</span><span class="p">,</span> <span class="s1">'LS var'</span><span class="p">,</span> <span class="s1">'frac diff'</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%12s</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2">&quot;</span> <span class="o">%</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%12s</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2"> </span><span class="si">%12lg</span><span class="s2">"</span> <span class="o">%</span> 
           <span class="p">(</span><span class="n">titles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="n">i</span><span class="p">]),</span> <span class="n">a3</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="n">i</span><span class="p">]),</span> <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">],</span> 
             <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">])))</span>
 </pre></div>
@@ -1083,11 +1136,11 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   parameter         MCMC           LS     MCMC var       LS var    frac diff
-      $M/MJ$      4.85904      4.84971  0.000844139  0.000848462  -0.00255406
-         $e$     0.365621     0.365386  2.84255e-05  2.87864e-05   -0.0063075
-    $\omega$     0.255935     0.256843  0.000334086  0.000377849    -0.061471
-       $t_P$      1353.21      1353.37      14.2288      16.2268   -0.0656025
-       $v_0$     -28.4507     -28.4066     0.184243     0.183562   0.00184951
+      $M/MJ$      4.85686      4.84971  0.000876622  0.000848462    0.0163244
+         $e$     0.365853     0.365386  3.05288e-05  2.87864e-05    0.0293755
+    $\omega$      0.25785     0.256843  0.000363071  0.000377849    -0.019946
+       $t_P$      1353.59      1353.37       15.499      16.2268   -0.0229407
+       $v_0$     -28.4414     -28.4066     0.191926     0.183562    0.0222732
 </pre></div>
 </div>
 </div>
@@ -1098,7 +1151,7 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C_mcmc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">C_mcmc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">,</span><span class="n">C_mcmc</span><span class="p">)</span>
 
 <span class="n">plot_matrices</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">C_mcmc</span><span class="o">-</span><span class="n">C</span><span class="p">,</span> <span class="n">C_mcmc</span><span class="o">+</span><span class="n">C</span><span class="p">)])</span>
 </pre></div>
@@ -1111,17 +1164,17 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
  [-1.316e-02 -2.972e-03  7.299e-02  1.623e+01  6.866e-02]
  [-4.161e-03 -3.427e-04  4.870e-04  6.866e-02  1.836e-01]] 
 
- [[ 8.442e-04 -5.610e-05 -4.027e-05 -1.178e-02 -4.166e-03]
- [-5.610e-05  2.843e-05 -7.275e-06 -2.589e-03 -4.113e-04]
- [-4.027e-05 -7.275e-06  3.341e-04  6.376e-02  4.694e-04]
- [-1.178e-02 -2.589e-03  6.376e-02  1.423e+01  6.671e-02]
- [-4.166e-03 -4.113e-04  4.694e-04  6.671e-02  1.842e-01]]
+ [[ 8.766e-04 -6.094e-05 -4.700e-05 -1.214e-02 -4.612e-03]
+ [-6.094e-05  3.053e-05 -5.209e-06 -2.498e-03 -3.884e-04]
+ [-4.700e-05 -5.209e-06  3.631e-04  6.963e-02  4.159e-04]
+ [-1.214e-02 -2.498e-03  6.963e-02  1.550e+01  6.382e-02]
+ [-4.612e-03 -3.884e-04  4.159e-04  6.382e-02  1.919e-01]]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/3ad39d80b331179aa1d53fac9ea4dce77afd8ebdcc6f88c32a1493c28ecc3f0d.png" src="_images/3ad39d80b331179aa1d53fac9ea4dce77afd8ebdcc6f88c32a1493c28ecc3f0d.png" />
+<img alt="_images/ed105804835208129be040b50a663cd0a8984cd348d53b2955802a35bf9439c8.png" src="_images/ed105804835208129be040b50a663cd0a8984cd348d53b2955802a35bf9439c8.png" />
 </div>
 </div>
 </section>
@@ -1154,7 +1207,7 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1182,15 +1235,17 @@ Best-fit parameters: M = 4.84971, e = -0.365386, omega = 0.256843, tP = 491.372,
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-svd">1. More on SVD</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-planetary-orbits">2. Fitting planetary orbits</a></li>
 </ul>
@@ -1241,8 +1296,8 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

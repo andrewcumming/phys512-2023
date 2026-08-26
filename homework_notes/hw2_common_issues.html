@@ -14,45 +14,48 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -60,44 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'homework_notes/hw2_common_issues';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Homework 3 solutions" href="../HW3_solutions.html" />
     <link rel="prev" title="Homework 2 solutions" href="../HW2_solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,10 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -125,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -140,6 +185,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -153,21 +200,17 @@
     
     
     <img src="../_static/plasma.png" class="logo__image only-light" alt="PHYS 512 Computational Physics with Applications - Home"/>
-    <script>document.write(`<img src="../_static/plasma.png" class="logo__image only-dark" alt="PHYS 512 Computational Physics with Applications - Home"/>`);</script>
+    <img src="../_static/plasma.png" class="logo__image only-dark pst-js-only" alt="PHYS 512 Computational Physics with Applications - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
@@ -185,12 +228,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../derivatives.html">Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interpolation.html">Interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration.html">Integration</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../function_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../function_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../derivatives_solutions.html">Derivatives exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interpolation_solutions.html">Interpolation exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../integration_solutions.html">Integration exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Random numbers</span></p>
 <ul class="nav bd-sidenav">
@@ -199,13 +242,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../generating_random.html">Probability distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../monte_carlo_integration.html">Monte Carlo integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../metropolis.html">Metropolis-Hastings algorithm</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../random_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../random_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prob_distributions_solutions.html">Probability distributions Exercise 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prob_distributions_solutions_part2.html">Probability distributions Part 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../montecarlo_solutions.html">Monte Carlo Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metropolis_solutions.html">Metropolis-Hastings</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solving systems of equations</span></p>
 <ul class="nav bd-sidenav">
@@ -214,11 +257,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../linear_least_squares.html">Linear least squares</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../polynomial_fit.html">Polynomial fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nonlinear.html">Non-linear least squares</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../solving_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solving_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../polynomial_fit_solutions.html">Orthogonal polynomials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../nonlinear_fit.html">Lorentzian fit</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
@@ -236,7 +279,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../conjugate_gradient.html">Sparse matrices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../numerical_instability.html">Boundary conditions and numerical stability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../diffusion.html">Diffusion in multi-dimensions</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ode_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ode_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../runge_kutta_solutions.html">Initial value problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bvps.html">Boundary value problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../symplectic_solutions.html">Symplectic integrators</a></li>
@@ -244,7 +287,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../numerical_instability_solutions.html">Boundary conditions and numerical stability solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adi.html">Alternating-direction implicit</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Spectral methods</span></p>
 <ul class="nav bd-sidenav">
@@ -253,14 +296,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../numerical_diffusion.html">Amplitude and phase errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../burgers.html">Burgers’ equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../signal_processing.html">Signal processing</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../spectral_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../spectral_solutions.html">Solutions to exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../fft_solutions.html">Discrete Fourier Transform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fft_1d_solutions.html">More on the 1D DFT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adv_diff_fourier.html">Advection-diffusion with Fourier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adv_diff_finite_difference.html">Advection-diffusion with finite differences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../LIGO.html">LIGO tutorial: find an inspiral</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Performance</span></p>
 <ul class="nav bd-sidenav">
@@ -282,7 +325,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../exam.html">Exam questions and solutions</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../project_instructions.html">Project Instructions</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../homework_solutions.html">Homework solutions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../homework_solutions.html">Homework solutions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../HW1_solutions.html">Homework 1 solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../HW2_solutions.html">Homework 2 solutions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Homework 2: Common Issues</a></li>
@@ -306,7 +349,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../HW6_solutions.html">Homework 6 solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../HW7_solutions.html">Homework 7 solutions</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -315,14 +358,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -331,14 +379,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -447,7 +495,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -461,27 +509,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -501,7 +541,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Homework 2: Common Issues</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#probem-1-a">Probem 1 a)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#proportionality-is-not-equality">Proportionality is not Equality</a></li>
@@ -514,7 +554,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#re-evaluate-notebooks-from-a-cold-start">Re-Evaluate Notebooks from a Cold Start</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-statements-measure-don-t-just-claim">Quantitative Statements: Measure, don’t just Claim</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays-while-and-list-comprehensions">Arrays, While and List-Comprehensions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential">Chemical Potential</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential">Chemical Potential</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overflows">Overflows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolation">Extrapolation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration">Integration</a></li>
@@ -524,7 +564,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-vs-relative-errors">Absolute vs. Relative Errors</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#style-issues">Style Issues</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#style-issues">Style Issues</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-at-a-distance">Action at a Distance</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-are-globals-ok">When are globals ok?</a></li>
 </ul>
@@ -656,12 +696,12 @@ value of a dimensionless quantity without name).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k_B</span> <span class="o">=</span> <span class="mf">1.380649e-23</span>
 
 
-<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k_B</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and then later remove the definition of <code class="docutils literal notranslate"><span class="pre">k_B</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k_B</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -743,14 +783,14 @@ Any change in temperature can be treated by re-scaling the units without re-eval
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k_B</span> <span class="o">=</span> <span class="mf">1.380649e-23</span>
 
 
-<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k_B</span>
 </pre></div>
 </div>
 <p>If you do something like that, please keep the definition of <code class="docutils literal notranslate"><span class="pre">k_B</span></code> in the same cell! Otherwise it might end up somewhere far removed from the code it affects and that makes the code extremely hard to reason about.</p>
 <p>In this case <code class="docutils literal notranslate"><span class="pre">k_B</span></code> might reasonably be expected to be a constant, but you might later decide to set it to unity. Sometimes I see variables like <code class="docutils literal notranslate"><span class="pre">x_vals</span></code> or similar with extremely generic names. Those are prone to being redefined often.</p>
 <p>A simple fix in this case would be</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function_local</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">some_function_local</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">k_B</span> <span class="o">=</span> <span class="mf">1.380649e-23</span>
 
     <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k_B</span>
@@ -761,12 +801,12 @@ Any change in temperature can be treated by re-scaling the units without re-eval
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">global_var</span> <span class="o">=</span> <span class="mi">10</span>
 
 
-<span class="k">def</span> <span class="nf">work</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">work</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
         <span class="mi">10</span> <span class="o">*</span> <span class="n">global_var</span>
 
 
-<span class="k">def</span> <span class="nf">work_local</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">work_local</span><span class="p">():</span>
     <span class="n">local_var</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
         <span class="mi">10</span> <span class="o">*</span> <span class="n">local_var</span>
@@ -786,14 +826,14 @@ Any change in temperature can be treated by re-scaling the units without re-eval
 In this example, it is nonsensical to define a function (don’t even worry that this function is pretty pointless and should be replaced by <code class="docutils literal notranslate"><span class="pre">numpy.arange</span></code>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">fill_values</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fill_values</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)):</span>
         <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
 </pre></div>
 </div>
 <p>It might allow you to fill you <code class="docutils literal notranslate"><span class="pre">values</span></code> more than once, but other than that it is just confusing.</p>
 <p>As a first fix, this would be acceptable:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_values</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fill_values</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)):</span>
         <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
 
@@ -802,7 +842,7 @@ In this example, it is nonsensical to define a function (don’t even worry that
 </div>
 <p>Now, we can call <code class="docutils literal notranslate"><span class="pre">fill_values</span></code> everywhere we want, even far away from its definition, and we can still understand what the function does. Everything that is required to understand this function is local to it! You might even decide to augment its behavior later, or to implement it in a completely different way. The semantics are clear: data in, data out. We don’t care where it comes from and where it may go.</p>
 <p>Be aware that <code class="docutils literal notranslate"><span class="pre">fill_values</span></code> will actually modify its argument. If you want to prevent that, you can do something like</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_values</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fill_values</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)):</span>
@@ -833,13 +873,13 @@ In this example, it is nonsensical to define a function (don’t even worry that
 <p>For “generic” variables like <code class="docutils literal notranslate"><span class="pre">xs</span> <span class="pre">=</span> <span class="pre">np.linpspace(...)</span></code> I’d strongly recommend limiting their use to the cell where they are defined.</p>
 <p>Sometimes, a collection of parameters might turn up again and again. If you don’t want to define all your functions with the same arguments over and over (which makes it hard to maintain), you can collect your parameters in a dictionary, or slightly nicer, like a <a class="reference external" href="https://docs.python.org/3/library/dataclasses.html">dataclass</a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Particle</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Particle</span><span class="p">:</span>
     <span class="n">mass</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">position</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
     <span class="n">velocity</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
 
 
-<span class="k">def</span> <span class="nf">kinetic_energy</span><span class="p">(</span><span class="n">particle</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">kinetic_energy</span><span class="p">(</span><span class="n">particle</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm2</span><span class="p">(</span><span class="n">particle</span><span class="o">.</span><span class="n">velocity</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mass</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
 </div>
@@ -857,7 +897,7 @@ In this example, it is nonsensical to define a function (don’t even worry that
 <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span>
 
 
-<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">some_argument</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">(</span><span class="n">some_argument</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">do_some_stuff</span> <span class="o">*</span> <span class="n">m</span> <span class="o">/</span> <span class="n">k_B</span>
 </pre></div>
 </div>
@@ -865,7 +905,7 @@ In this example, it is nonsensical to define a function (don’t even worry that
 that into the code? If this seems nontrivial to you, remark about it
 in a docstring or comment. Also, you might be interested on <a class="reference external" href="https://en.wikipedia.org/wiki/Nondimensionalization">how to find even better units</a>.</p>
 <p>Also, don’t compute things you won’t use, like:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">expensive</span><span class="p">()</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">expensive</span><span class="p">()</span>
 
@@ -873,7 +913,7 @@ in a docstring or comment. Also, you might be interested on <a class="reference 
 </pre></div>
 </div>
 <p>Also, keep in mind that you don’t have to perform the same task twice:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">():</span>
     <span class="n">array</span> <span class="o">=</span> <span class="n">expensive</span><span class="p">()</span>
 
     <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">array</span> <span class="o">&lt;</span> <span class="n">expensive_too</span><span class="p">(</span><span class="n">array</span><span class="p">)]</span>
@@ -883,7 +923,7 @@ in a docstring or comment. Also, you might be interested on <a class="reference 
 </pre></div>
 </div>
 <p>Rather, you could do something like:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">():</span>
     <span class="n">array</span> <span class="o">=</span> <span class="n">expensive</span><span class="p">()</span>
 
     <span class="n">mask</span> <span class="o">=</span> <span class="n">array</span> <span class="o">&lt;</span> <span class="n">expensive_too</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
@@ -915,7 +955,7 @@ to define a function for that, or at least use a loop. Copy pasting produces lon
 </pre></div>
 </div>
 <p>which could be improved as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale_elements</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">scale_elements</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
     <span class="n">array</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
     <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">5</span>
 
@@ -967,14 +1007,14 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
 </pre></div>
 </div>
 <p>For functions, python provides you with the wonderful tool of docstrings. Those allow you to say what the function does and which arguments it takes. This way you don’t even have to read the code later on if you just want to be reminded of what the code did.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the baz value from the qux `foo` and the quux `bar`.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Calculate the baz value from the qux `foo` and the quux `bar`.</span>
 
 <span class="sd">    Note that `foo` and `bar` can either be floats or numpy arrays.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="c1"># lot&#39;s of code</span>
-    <span class="c1"># we don&#39;t need to know the details at this time...</span>
+    <span class="c1"># lot's of code</span>
+    <span class="c1"># we don't need to know the details at this time...</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
@@ -989,7 +1029,7 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
 <span class="n">z</span> <span class="o">=</span> <span class="n">complicated</span><span class="p">()</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>is much easier to read than</p>
@@ -997,7 +1037,7 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
 <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">complicated</span><span class="p">()</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>or even (<em>please don’t do that</em>)</p>
@@ -1007,7 +1047,7 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
 <span class="n">z</span> <span class="o">=</span> <span class="n">complicated</span><span class="p">()</span>
 <span class="c1">#----------------------------</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Please be consistent with you indentation levels too.</p>
@@ -1067,7 +1107,7 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1095,15 +1135,17 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Homework 2: Common Issues</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#probem-1-a">Probem 1 a)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#proportionality-is-not-equality">Proportionality is not Equality</a></li>
@@ -1116,7 +1158,7 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#re-evaluate-notebooks-from-a-cold-start">Re-Evaluate Notebooks from a Cold Start</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-statements-measure-don-t-just-claim">Quantitative Statements: Measure, don’t just Claim</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays-while-and-list-comprehensions">Arrays, While and List-Comprehensions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential">Chemical Potential</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential">Chemical Potential</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overflows">Overflows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolation">Extrapolation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration">Integration</a></li>
@@ -1126,7 +1168,7 @@ performs a nontrivial task. Don’t write your code twice: once in English and o
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-vs-relative-errors">Absolute vs. Relative Errors</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#style-issues">Style Issues</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#style-issues">Style Issues</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-at-a-distance">Action at a Distance</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-are-globals-ok">When are globals ok?</a></li>
 </ul>
@@ -1189,8 +1231,8 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

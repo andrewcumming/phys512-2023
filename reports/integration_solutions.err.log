@@ -1,0 +1,96 @@
+Traceback (most recent call last):
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+def do_int(n):
+    # integration limits
+    x1 = 0.0
+    x2 = np.pi/2
+    x = np.linspace(x1, x2, n)
+    dx = (x2-x1)/(n-1)
+    
+    # Choose the function to integrate
+    if True:
+        f = np.cos(x)
+        I0 = 1.0
+    else: 
+        # Polynomial
+        a = 4
+        I0 = (np.pi/2)**(a+1)/(a+1)  # The analytic value of the integral
+        f = x**a  # The function to integrate
+    
+    I1 = np.sum(f[:-1])*dx    # rectangle rule
+    I2 = np.sum(f[1:-1]*dx) + 0.5*dx*(f[0]+f[-1])    # trapzoidal rule
+    I3 = np.sum(4*f[1:-1:2]*dx) + np.sum(2*f[2:-1:2]*dx) + f[0]*dx + f[-1]*dx  #simpson's rule
+    I3 = I3/3.0
+    return abs((I1-I0)/I0), abs((I2-I0)/I0), abs((I3-I0)/I0)
+
+# try different numbers of points, generated as 2^n + 1 so the number is odd
+n_vals = [2**(i+1) + 1 for i in range(11)]
+err1=np.array([])
+err2=np.array([])
+err3=np.array([])
+for n in n_vals:
+    e1, e2, e3 = do_int(n)
+    print(n, e1, e2, e3)
+    err1 = np.append(err1, e1)
+    err2 = np.append(err2, e2)
+    err3 = np.append(err3, e3)
+    
+plt.plot(n_vals, err1, label='Rectangular')
+plt.plot(n_vals, err2, label='Trapezoidal')
+plt.plot(n_vals, err3, label='Simpson')
+
+n = np.array(n_vals)
+dx = (np.pi/2)/(n-1)
+# Plot the Euler Maclaurin error formulas
+plt.plot(n_vals, dx/2, ":")
+plt.plot(n_vals, dx**2/12, ":")
+plt.plot(n_vals, dx**4/180, ":")
+
+plt.yscale('log')
+plt.xscale('log')
+plt.legend()
+plt.show()
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
+[32m      2[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
+[32m      3[39m 
+[32m      4[39m [38;5;28;01mdef[39;00m do_int(n):
+
+[31mModuleNotFoundError[39m: No module named 'numpy'
+

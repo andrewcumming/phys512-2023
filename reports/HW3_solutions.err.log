@@ -1,0 +1,138 @@
+Traceback (most recent call last):
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/cumming/projects_local/phys512_dev/venv/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import time
+import numpy as np
+import matplotlib.pyplot as plt
+rng = np.random.default_rng(seed = 12345)
+
+ngrid = 201
+ncenter = 100
+
+grid = np.zeros((ngrid, ngrid))
+
+# Set the initial "seed" at the center of the grid
+#for i in range(ngrid):
+#    for j in range(ngrid):
+#        if ((i-ncenter)**2 + (j-ncenter)**2) < 3:
+#            grid[i,j] = 1
+# or start with only 1 particle in the center
+grid[ncenter, ncenter] = 1
+
+# An alternative is to try a linear seed:
+#n1 = int(ngrid*0.49)
+#n2 = int(ngrid*0.51)
+#grid[n1:n2, n1:n2] = 1
+
+# the number of "walkers" (=liquid particles)
+nwalkers = 10000
+
+# now assign random coordinates to the walkers
+coords = rng.integers(low=0, high=ngrid, size=(nwalkers,2))
+coords, grid = remove_solids(coords, grid)
+
+# calculate the radial distances from the center for all particles
+r_vec0 = np.zeros(len(coords[:]))
+for ind, (i,j) in enumerate(coords):
+    r_vec0[ind] = np.sqrt((i-ncenter)**2 + (j-ncenter)**2)
+
+# store the number of solid particles vs time
+n_arr = np.array([])
+t_arr = np.array([])
+
+t0 = time.time()
+
+t = 0
+fig_count = 0
+
+# Keep going until we've used up some fraction of the walkers
+while len(coords[:]) > 0.2 * nwalkers:
+
+    coords = (coords + rng.integers(-1, high=2, size=np.shape(coords))) % ngrid
+    coords, grid = remove_solids(coords, grid)
+
+    if  t % 10 == 0:
+        
+        plt.close()
+        plt.clf()
+        
+        fig = plt.figure(figsize=(18,8))
+        ax1 = fig.add_subplot(121)
+        ax1.set_title('N=%d, t=%d' % (np.sum(grid), t))
+    
+        gridw = np.zeros((ngrid, ngrid))
+        for (i,j) in coords:
+            gridw[i,j] = 1
+        ax1.imshow(np.minimum(gridw + 2*grid,2), origin='lower', interpolation ='none')
+        
+        ax2 = fig.add_subplot(122)
+        r_vec = np.zeros(len(coords[:]))
+        for ind, (i,j) in enumerate(coords):
+            r_vec[ind] = np.sqrt((i-ncenter)**2 + (j-ncenter)**2)
+        bins0 = np.linspace(0,150,26)
+        counts, bins = np.histogram(r_vec, bins = bins0)
+        rads = 0.5*(bins[:-1] + bins[1:])
+        plt.stairs(counts / (2*np.pi*rads), bins)
+        counts, bins = np.histogram(r_vec0, bins = bins0)
+        rads = 0.5*(bins[:-1] + bins[1:])
+        plt.stairs(counts / (2*np.pi*rads), bins, linestyle=":")
+        
+        ymax = 1.1*max(counts/ (2*np.pi*rads))
+        plt.plot([np.sqrt(t),np.sqrt(t)],[0.0,ymax], "--")
+        plt.ylim((0.0,ymax))
+        
+        # Save the plot as a png file so we can make a movie
+        #fig_count += 1
+        #plt.savefig('figs/%0.4d.png' % (fig_count,))
+        
+        #plt.show()
+    
+
+    t = t + 1
+    n_arr = np.append(n_arr, np.sum(grid))
+    t_arr = np.append(t_arr, t)
+    
+plt.show()
+print("Time taken = ", time.time()-t0)
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 2[39m
+[32m      1[39m [38;5;28;01mimport[39;00m time
+[32m----> [39m[32m2[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
+[32m      3[39m [38;5;28;01mimport[39;00m matplotlib.pyplot [38;5;28;01mas[39;00m plt
+[32m      4[39m rng = np.random.default_rng(seed = [32m12345[39m)
+[32m      5[39m 
+
+[31mModuleNotFoundError[39m: No module named 'numpy'
+
